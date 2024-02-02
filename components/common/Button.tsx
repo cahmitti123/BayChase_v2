@@ -15,12 +15,14 @@ const Button = ({
   icon_start,
   icon_end,
   variant,
-  full
+  full,
 }: ButtonProps) => {
   return (
     <button
       type={type}
-      className={`flexCenter gap-3 rounded-full border ${variant} ${full && 'w-full'}`}
+      className={`flexCenter gap-3 rounded-full border ${variant} ${
+        full && "w-full"
+      }`}
     >
       {icon_start && icon_start}
       <label className="bold-16 whitespace-nowrap cursor-pointer">

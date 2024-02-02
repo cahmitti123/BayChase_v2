@@ -11,12 +11,7 @@ interface CampSiteProps {
   peopleJoined: string;
 }
 
-const CampSite = ({
-  bgImage,
-  title,
-  subtitle,
-  peopleJoined,
-}: CampSiteProps) => {
+const CampSite = ({ bgImage, title, subtitle }: CampSiteProps) => {
   return (
     <div className="flexCenter md:container relative w-full h-[25rem] md:h-[40rem] ">
       <div
@@ -27,7 +22,7 @@ const CampSite = ({
             <div className="rounded-full bg-gray-1 p-3">
               <HiMap
                 size={48}
-                className="text-white rounded-full bg-green-50 p-2"
+                className="text-white rounded-full bg-blue-70 p-2"
               />
             </div>
 
@@ -39,7 +34,7 @@ const CampSite = ({
             </div>
           </div>
 
-          <div className="flexCenter gap-6">
+          {/* <div className="flexCenter gap-6">
             <span className="flex -space-x-4 overflow-hidden">
               {PEOPLE_URL.map((url) => (
                 <Image
@@ -54,7 +49,7 @@ const CampSite = ({
               ))}
             </span>
             <p className="bold-16 md:bold-20 text-white">{peopleJoined}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

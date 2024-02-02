@@ -14,10 +14,10 @@ const Hero = () => {
 
   return (
     <motion.div
-      variants={fadeIn("up", 0)}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-      exit="hidden"
+      // variants={fadeIn("up", 0)}
+      // initial="hidden"
+      // animate={inView ? "show" : "hidden"}
+      // exit="hidden"
       className="xl:container"
     >
       <section
@@ -30,14 +30,22 @@ const Hero = () => {
           ref={refInfo}
           className="relative z-20 flex flex-1 flex-col xl:w-1/2"
         >
-          <h1 className="bold-52 lg:bold-64 xl:whitespace-nowrap tracking-tighter">
-            Mapeando Aventuras
+          <h1 className="bold-52 lg:bold-64 xl:whitespace-nowrap tracking-tighter text-blue-70">
+            Embark on Epic <br />
+            Surfing Journeys <br />
+            with US
           </h1>
+          <h3 className="mt-4 bold-20 lg:bold-20 xl:whitespace-nowrap tracking-tighter text-blue-70">
+            Your Gateway to Morocco's Hidden Waves
+          </h3>
           <p className="regular-16 mt-6 text-gray-30 xl:max-w-[32.5rem]">
-            Queremos estar presentes em cada uma de suas jornadas, buscando a
-            satisfação e contemplando a beleza incorruptível da natureza.
-            Podemos ajudá-lo em uma aventura ao redor do mundo com apenas um
-            aplicativo.
+            Unleash the thrill of untouched waves in Morocco with BayChaser. Our
+            expert guides curate unforgettable surf adventures, revealing secret
+            spots that redefine the surfing experience. Choose freedom – let us
+            handle logistics, coaching, and equipment. Your only task? Immerse
+            yourself in the magic of the ocean. Join BayChaser for a surf
+            odyssey unlike any other, where every wave tells a story and every
+            moment is a triumph.
           </p>
 
           <div className="my-11 flex flex-wrap gap-5">
@@ -50,46 +58,22 @@ const Hero = () => {
             </div>
 
             <p className="bold-16 lg:bold-20 text-gray-1">
-              +100k
+              +1k
               <span className="regular-16 lg:regular-20 ml-2">
-                Avaliações excelentes
+                Appreciated our services
               </span>
             </p>
           </div>
 
           <div className="flex flex-col w-full gap-3 sm:flex-row">
-            <Button type="button" title="Download App" variant="btn_dark" />
+            <Button type="button" title="Book Now!" variant="btn_dark" />
 
             <Button
               type="button"
-              title="Como funciona?"
+              title="What do we offer?"
               variant="btn_white_text"
-              icon_start={<HiPlay size={32} className="text-green-600" />}
+              icon_start={<HiPlay size={32} className="text-blue-70" />}
             />
-          </div>
-        </div>
-
-        <div ref={refMap} className="relative flex flex-1 items-start">
-          <div className="relative z-20 flex w-[16.75rem] flex-col gap-8 rounded-3xl bg-gray-1 px-7 py-8 mt-5">
-            <div className="flex flex-col">
-              <div className="flexBetween">
-                <p className="regular-16 text-gray-20">Localização</p>
-                <HiX size={20} className="text-white" />
-              </div>
-              <p className="bold-20 text-white">Trilha Inca</p>
-            </div>
-
-            <div className="flexBetween">
-              <div className="flex flex-col">
-                <p className="regular-16 block text-gray-20">Distância</p>
-                <p className="bold-20 text-white">52.44 Km</p>
-              </div>
-
-              <div className="flex flex-col">
-                <p className="regular-16 block text-gray-20">Elevação</p>
-                <p className="bold-20 text-white">2.043 Km</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

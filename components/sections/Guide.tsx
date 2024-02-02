@@ -18,20 +18,23 @@ const Guide = () => {
     >
       <section ref={ref} className="flexCenter flex-col mt-10">
         <div className=" padding-container container w-full pb-24">
-          <p className="uppercase regular-18 mb-3 text-green-50">
-            Nós estamos aqui por você
-          </p>
+          <p className="uppercase regular-18 mb-3 text-blue-70">About Us</p>
 
           <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
-            <h2 className="bold-40 lg:bold-64 xl:max-w-[390px]">
-              Navegação Descomplicada
-            </h2>
+            <h2 className="bold-40 lg:bold-64 xl:max-w-[390px]">Who Are We?</h2>
             <p className="regular-16 text-gray-30 xl:max-w-[520px]">
-              Com o Geoway, você estará sempre no caminho certo, graças ao nosso
-              suporte para mapas offline quando você estiver desconectado da
-              internet. Convide amigos, familiares e colegas para desfrutar da
-              natureza, explorando vales pitorescos e atingindo o pico das
-              montanhas.
+              <strong>
+                Behind BayChaser: Crafting Surfing Adventures with Passion and
+                Expertise.
+              </strong>{" "}
+              <br />
+              <br />
+              Discover the heart and soul of BayChaser. Our team, fueled by a
+              love for surfing and a passion for exploration, is dedicated to
+              curating unparalleled experiences. Learn about our journey,
+              commitment to sustainability, and the shared excitement that
+              drives us to unveil the beauty of Morocco's hidden waves. Join us
+              in this surf-filled adventure!
             </p>
           </div>
         </div>
@@ -42,9 +45,12 @@ const Guide = () => {
           animate={inViewImage ? "show" : "hidden"}
           exit="hidden"
         >
-          <div ref={refImage} className="flexCenter md:container relative w-full">
+          <div
+            ref={refImage}
+            className="flexCenter md:container relative w-full"
+          >
             <Image
-              src="/img-5.png"
+              src="/sunset.webp"
               alt="Guide"
               width={1280}
               height={720}
@@ -62,15 +68,15 @@ const Guide = () => {
               <div className="flexBetween flex-col">
                 <div className="flex w-full flex-col">
                   <div className="flexBetween w-full">
-                    <p className="regular-16 text-gray-20">Destino</p>
-                    <p className="bold-16 text-green-50">52 min</p>
+                    <p className="regular-16 text-gray-20">Arrivée</p>
+                    {/* <p className="bold-16 text-blue-70">52 min</p> */}
                   </div>
-                  <p className="bold-20">Trilha Inca</p>
+                  <p className="bold-20">Heaven</p>
                 </div>
 
                 <div className="flex w-full flex-col">
-                  <p className="regular-16 text-gray-20">Ponto inicial</p>
-                  <h4 className="bold-20 whitespace-nowrap">Puerta del Sol</h4>
+                  <p className="regular-16 text-gray-20">Depart</p>
+                  <h4 className="bold-20 whitespace-nowrap">Meeting Point</h4>
                 </div>
               </div>
             </div>

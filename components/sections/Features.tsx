@@ -1,9 +1,8 @@
 "use client";
 import { FEATURES } from "@/constants";
 import Image from "next/image";
-import { HiCalendarDays } from "react-icons/hi2";
-import { HiLocationMarker, HiVolumeUp } from "react-icons/hi";
-import { LuWifiOff } from "react-icons/lu";
+import { MdKitesurfing } from "react-icons/md";
+import { GiSurferVan, GiWaveSurfer, GiSurfBoard } from "react-icons/gi";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "@/animation/variants";
@@ -27,23 +26,26 @@ const Features = () => {
         <div className="maxContainer relative flex w-full justify-end">
           <div className="flex flex-1 lg:min-h-[900px]">
             <Image
-              src="/phone.png"
-              alt="Phone"
+              src="/services.jpg"
+              alt="services"
               width={440}
               height={1000}
-              className="feature-phone"
+              className="feature-phone opacity-50"
             />
           </div>
 
           <div className="z-20 flex w-full flex-col lg:w-[60%]">
-            <h2 className="bold-32 lg:bold-64">Funcionalidades</h2>
+            <h2 className="bold-32 lg:bold-64">Our Services</h2>
             <motion.div
               variants={fadeIn("right", 0)}
               initial="hidden"
               animate={inViewFeatures ? "show" : "hidden"}
               exit="hidden"
             >
-              <ul ref={refFeatures} className="mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20">
+              <ul
+                ref={refFeatures}
+                className="mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20"
+              >
                 {FEATURES.map((feature) => (
                   <FeatureItem
                     title={feature.title}
@@ -68,10 +70,10 @@ interface FeatureItemProps {
 }
 
 const iconMap: { [key: string]: JSX.Element } = {
-  LuWifiOff: <LuWifiOff size={28} />,
-  HiCalendarDays: <HiCalendarDays size={28} />,
-  HiVolumeUp: <HiVolumeUp size={28} />,
-  HiLocationMarker: <HiLocationMarker size={28} />,
+  GiSurferVan: <GiSurferVan size={28} />,
+  MdKitesurfing: <MdKitesurfing size={28} />,
+  GiWaveSurfer: <GiWaveSurfer size={28} />,
+  GiSurfBoard: <GiSurfBoard size={28} />,
 };
 
 const FeatureItem = ({ title, icon, description }: FeatureItemProps) => {
@@ -79,7 +81,7 @@ const FeatureItem = ({ title, icon, description }: FeatureItemProps) => {
 
   return (
     <li className="flex w-full flex-1 flex-col items-start">
-      <div className="rounded-full p-4 lg:p-7 bg-green-50 text-white">
+      <div className="rounded-full p-4 lg:p-7 bg-blue-70 text-white">
         {iconComponent}
       </div>
       <h2 className="bold-20 lg:bold-32 mt-5 capitalize">{title}</h2>
