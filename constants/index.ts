@@ -1,10 +1,10 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
-  { href: "/", key: "about", label: "Sobre o Geoway" },
-  { href: "/", key: "services", label: "Serviços" },
-  { href: "/", key: "pricing ", label: "Preços" },
-  { href: "/", key: "contact", label: "Contato" },
+  { href: "/", key: "Gallery", label: "Gallery" },
+  { href: "/", key: "about", label: "About Us" },
+  { href: "/", key: "services", label: "Services" },
+  { href: "/", key: "contact", label: "Contact Us" },
 ];
 
 // CAMP SECTION
@@ -18,75 +18,68 @@ export const PEOPLE_URL = [
 // FEATURES SECTION
 export const FEATURES = [
   {
-    title: "Mapas Disponíveis 24 Horas por Dia",
-    icon: "LuWifiOff",
+    title: "Surf with Experts",
+    icon: "MdKitesurfing",
     variant: "green",
     description:
-      "Na Geoway, acreditamos que nossos usuários merecem o melhor. Por isso, nossos mapas estão sempre disponíveis, 24 horas por dia, 7 dias por semana, mesmo em locais sem internet.",
+      "Embark on guided surf tours led by our seasoned experts. Explore Morocco's secret waves with confidence, as our guides ensure an unforgettable surfing experience.",
   },
   {
-    title: "Crie Planos de Aventura",
-    icon: "HiCalendarDays",
+    title: "Master Your Wave",
+    icon: "GiWaveSurfer",
     variant: "green",
     description:
-      "Elabore emocionantes aventuras com seus familiares e amigos e aproveite ofertas especiais em pacotes personalizados. Desfrute de suas aventuras sem preocupações com a Geoway.",
+      "Enhance your skills with personalized coaching sessions. Our experienced instructors tailor lessons to your level, helping you conquer the waves with style and confidence.",
   },
   {
-    title: "Navegação por comandos de voz",
-    icon: "HiVolumeUp",
+    title: "Gear Up for Adventure",
+    icon: "GiSurfBoard",
     variant: "green",
     description:
-      "Desfrute de orientações por voz enquanto explora, garantindo que você nunca se perca durante suas emocionantes aventuras. A tranquilidade de ter um guia confiável a cada passo do caminho.",
+      "Don't worry about equipment. Rent top-quality gear from BayChaser and hit the waves fully equipped. Focus on surfing; we've got the rest covered.",
   },
   {
-    title: "Descubra Novos Destinos",
-    icon: "HiLocationMarker",
+    title: "All-Inclusive Surf Escapes",
+    icon: "GiSurferVan",
     variant: "laranja",
     description:
-      "Explore uma diversidade de novos destinos emocionantes que são acrescentados mensalmente. Estamos constantemente buscando a excelência para sua próxima aventura.",
+      "Immerse yourself in carefree adventure with our comprehensive packages. From accommodations to surf sessions, let BayChaser curate the perfect surfing getaway for you.",
   },
 ];
 
 // FOOTER SECTION
 export const FOOTER_LINKS = [
   {
-    title: "Institucional",
+    title: "Community",
     links: [
-      "Sobre a Geoway",
-      "Trabalhe Conosco",
-      "Contato",
-      "Missão e Valores",
-      "Equipe Geoway",
+      "Community Forum",
     ],
   },
-  {
-    title: "Dúvidas Gerais",
-    links: [
-      "Funcionamento do App",
-      "Formas de Pagamento",
-      "FAQ",
-      "Garantia de Qualidade",
-      "Política de Devolução",
-    ],
-  },
-  {
-    title: "Suporte",
-    links: [
-      "Contato de Suporte",
-      "Guia do Usuário",
-      "Problemas Técnicos",
-      "Central de Ajuda",
-      "Chat ao Vivo",
-    ],
-  },
+  // {
+  //   title: "Dúvidas Gerais",
+  //   links: [
+  //     "Funcionamento do App",
+  //     "Formas de Pagamento",
+  //     "FAQ",
+  //     "Garantia de Qualidade",
+  //     "Política de Devolução",
+  //   ],
+  // },
+  // {
+  //   title: "Suporte",
+  //   links: [
+  //     "Contato de Suporte",
+  //     "Guia do Usuário",
+  //     "Problemas Técnicos",
+  //     "Central de Ajuda",
+  //     "Chat ao Vivo",
+  //   ],
+  // },
 ];
 
 export const SOCIALS = {
   title: "Social",
   links: [
-    { icon: "FaLinkedinIn", href: "https://www.linkedin.com/in/gui-bus/" },
-    { icon: "FaGithub", href: "https://github.com/gui-bus" },
-    { icon: "FaInstagram", href: "https://www.instagram.com/guibus_dev/" },
-    { icon: "FaXTwitter", href: "https://twitter.com/guibus_dev" },
+    { icon: "FaInstagram", href: "https://www.instagram.com/baychaser/" },
   ],
 };

@@ -27,11 +27,11 @@ const Footer = () => {
           <Link href="/" className="mb-10">
             <Image
               src="/logo.png"
-              alt="Geoway"
+              alt="BayChaser"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-28 h-auto"
+              className="w-40 h-auto"
             />
           </Link>
 
@@ -73,15 +73,15 @@ const Footer = () => {
         <div className="border bg-gray-20" />
 
         <p className="regular-14 w-full text-center text-gray-30">
-          &copy; {currentYear} Geoway | Todos os direitos reservados. - Criado
-          por{" "}
+          &copy; {currentYear} BayChaser | Your Gide To Secret Places. - Morocco
+          {/* par{" "}
           <Link
-            className="transition-all duration-300 hover:text-green-50 hover:font-bold"
-            href="https://www.linkedin.com/in/gui-bus/"
+            className="transition-all duration-300 hover:text-blue-70 hover:font-bold"
+            href="/"
             target="_blank"
           >
-            Guilherme Bustamante
-          </Link>
+            Ahmitti Chouaib
+          </Link> */}
           .
         </p>
       </div>

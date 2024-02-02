@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/animation/variants";
 import { useInView } from "react-intersection-observer";
+import { ApplyForm } from "./Form";
 
 const GetApp = () => {
   const [ref, inView] = useInView({ triggerOnce: false });
@@ -19,6 +20,7 @@ const GetApp = () => {
       exit="hidden"
     >
       <section
+        id="book"
         ref={ref}
         className="flexCenter w-full flex-col pb-28 xl:pb-52 mt-10 xl:mt-28 relative"
       >
@@ -31,36 +33,25 @@ const GetApp = () => {
         >
           <div ref={refDownload} className="get-app">
             <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
-              <h2 className="bold-40 l:bold-64 xl:max-w-[320px]">
-                Baixe de graça agora mesmo!
+              <h2 className="bold-40 l:bold-64 xl:max-w-[400px]">
+                Seize Your Wave : Reserve Your Surfing Adventure Now!
               </h2>
               <p className="regular-16 text-gray-10">
-                Disponível para dispositivos iOS e Android
+                Embark on an epic surfing journey with BayChaser! Dive into the
+                thrill of Morocco's hidden waves by securing your spot now. Our
+                booking form is your gateway to surf adventure. Fill it out, and
+                let anticipation build for a surf experience that promises
+                excitement, camaraderie, and unforgettable memories. Seize the
+                moment – your surf odyssey awaits!
               </p>
-              <div className="flex w-full flex-col gap-3 whitespace-nowrap xl:flex-row">
-                <Button
-                  type="button"
-                  title="App Store"
-                  icon_start={<IoLogoApple size={28} />}
-                  variant="btn_white"
-                  full
-                />
-                <Button
-                  type="button"
-                  title="Play Store"
-                  icon_start={<IoLogoGooglePlaystore size={28} />}
-                  variant="btn_dark_green_outline"
-                  full
-                />
-              </div>
             </div>
             <div className="flex flex-1 items-center justify-end visible xl:invisible">
-              <Image src="/phones.png" alt="Phones" width={550} height={870} />
+              <ApplyForm />
             </div>
           </div>
         </motion.div>
         <div className="xl:flex flex-1 items-center justify-end absolute right-10 z-50 hidden">
-          <Image src="/phones.png" alt="Phones" width={550} height={870} />
+          <ApplyForm />
         </div>
       </section>
     </motion.div>

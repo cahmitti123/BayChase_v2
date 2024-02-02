@@ -21,11 +21,11 @@ const Navbar = () => {
         <Link href="/">
           <Image
             src="/logo.png"
-            alt="Geoway"
+            alt="BayChaser"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-28 h-auto"
+            className="w-40 h-auto"
           />
         </Link>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
             <Link
               href={link.href}
               key={link.key}
-              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+              className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:text-blue-70 hover:font-semibold"
             >
               {link.label}
             </Link>
@@ -44,8 +44,8 @@ const Navbar = () => {
         <div className="lg:flexCenter hidden">
           <Button
             type="button"
-            title="Login"
-            icon_start={<LuUser2 size={20} />}
+            title="Book Now"
+            // icon_start={<LuUser2 size={20} />}
             variant="btn_dark"
           />
         </div>
@@ -61,8 +61,8 @@ const Navbar = () => {
                 <div className="py-4">
                   <Button
                     type="button"
-                    title="Login"
-                    icon_start={<LuUser2 size={20} />}
+                    title="Book Now"
+                    // icon_start={<LuUser2 size={20} />}
                     variant="btn_dark_mobile"
                   />
                 </div>
