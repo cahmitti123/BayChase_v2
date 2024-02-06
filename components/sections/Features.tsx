@@ -1,94 +1,104 @@
 "use client";
-import { FEATURES } from "@/constants";
-import Image from "next/image";
-import { MdKitesurfing } from "react-icons/md";
-import { GiSurferVan, GiWaveSurfer, GiSurfBoard } from "react-icons/gi";
+import React, { useCallback, useState } from "react";
+import { PACKAGES } from "@/constants/content";
 
-import { motion } from "framer-motion";
-import { fadeIn } from "@/animation/variants";
-import { useInView } from "react-intersection-observer";
+import { Card, CardContent } from "@/components/ui/card";
+import Autoplay from "embla-carousel-autoplay";
+
+import { Badge } from "@/components/ui/badge";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+export function CarouselSpacing() {
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    } else {
+      return text;
+    }
+  };
+  return (
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+      opts={{ align: "start", loop: true }}
+      orientation="vertical"
+      className="w-full md:w-2/5 mt-16 md:mt-3 xl:-mt-32"
+    >
+      <CarouselContent className="-mt-1 h-[250px]">
+        {PACKAGES.map((pkg, index) => (
+          <CarouselItem key={index} className="pt-1 md:basis-1">
+            <div className="p-1">
+              <Card className="backdrop-blur-sm bg-blue-200 bg-opacity-10">
+                <CardContent className="flex flex-col">
+                  <div className="flex flex-row justify-between items-center py-3 w-full">
+                    <Link
+                      href={pkg.href}
+                      className="text-2xl text-start text-blue-70 font-semibold mr-3 hover:text-black cursor-pointer"
+                    >
+                      {pkg.label}
+                    </Link>
+                    <Badge variant={"secondary"}>{pkg.price} €</Badge>
+                  </div>
+                  <p className="w-2/3">{truncateText(pkg.description, 80)}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+}
 
 const Features = () => {
-  const [ref, inView] = useInView({ triggerOnce: false });
-  const [refFeatures, inViewFeatures] = useInView({ triggerOnce: false });
-
   return (
-    <motion.div
-      variants={fadeIn("left", 0)}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-      exit="hidden"
-    >
-      <section
-        ref={ref}
-        className="container flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24"
-      >
-        <div className="maxContainer relative flex w-full justify-end">
-          <div className="flex flex-1 lg:min-h-[900px]">
-            <Image
-              src="/services.jpg"
-              alt="services"
-              width={440}
-              height={1000}
-              className="feature-phone opacity-50"
-            />
-          </div>
+    <Card className="container rounded-3xl bg-white">
+      <section className="flex-col bg-feature-bg xs:py-2  bg-center bg-no-repeat xl:py-10 ">
+        <div className="flex w-full flex-col items-center md:items-start">
+          <h2 className="bold-32 lg:bold-64 text-blue-70">Our Packages</h2>
 
-          <div className="z-20 flex w-full flex-col lg:w-[60%]">
-            <h2 className="bold-32 lg:bold-64">Our Services</h2>
-            <motion.div
-              variants={fadeIn("right", 0)}
-              initial="hidden"
-              animate={inViewFeatures ? "show" : "hidden"}
-              exit="hidden"
-            >
-              <ul
-                ref={refFeatures}
-                className="mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20"
-              >
-                {FEATURES.map((feature) => (
-                  <FeatureItem
-                    title={feature.title}
-                    key={feature.title}
-                    icon={feature.icon}
-                    description={feature.description}
-                  />
-                ))}
-              </ul>
-            </motion.div>
+          <div className="w-full">
+            <div className="flexEnd mt-5 md:mt-10 md:px-6 lg:-mt-60 z-50 relative text-center md:text-left">
+              <div className="bg-blue-70 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:p-12 relative w-full overflow-hidden rounded-3xl drop-shadow-2xl">
+                <h2 className="regular-24 md:regular-32 2xl:regular-64 text-white">
+                  <strong>Surfing Magic: </strong>BayChaser's Unseen Wonders!
+                </h2>
+                <p className="regular-14 xl:regular-16 mt-5 text-white">
+                  Dive into our gallery, where every image tells a story of
+                  extraordinary surf tours. Let the visuals inspire your next
+                  adventure with BayChaser. Discover the allure of Morocco's
+                  hidden waves through our lens, inviting you to join a surfing
+                  experience that transcends the ordinary.
+                </p>
+                <Image
+                  src="/quote.svg"
+                  alt="Quote"
+                  width={186}
+                  height={219}
+                  className="camp-quote"
+                />
+              </div>
+            </div>
+            <CarouselSpacing />
           </div>
         </div>
       </section>
-    </motion.div>
-  );
-};
-
-interface FeatureItemProps {
-  title: string;
-  icon: string;
-  description: string;
-}
-
-const iconMap: { [key: string]: JSX.Element } = {
-  GiSurferVan: <GiSurferVan size={28} />,
-  MdKitesurfing: <MdKitesurfing size={28} />,
-  GiWaveSurfer: <GiWaveSurfer size={28} />,
-  GiSurfBoard: <GiSurfBoard size={28} />,
-};
-
-const FeatureItem = ({ title, icon, description }: FeatureItemProps) => {
-  const iconComponent = iconMap[icon] || null;
-
-  return (
-    <li className="flex w-full flex-1 flex-col items-start">
-      <div className="rounded-full p-4 lg:p-7 bg-blue-70 text-white">
-        {iconComponent}
-      </div>
-      <h2 className="bold-20 lg:bold-32 mt-5 capitalize">{title}</h2>
-      <p className="regular-16 mt-5 bg-white/80 text-gray-30 lg:mt-[30px] lg:bg-none">
-        {description}
-      </p>
-    </li>
+    </Card>
   );
 };
 

@@ -1,3 +1,5 @@
+import { Gallery } from "./app/gallery/page"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -43,6 +45,7 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -98,9 +101,13 @@ module.exports = {
         "bg-img-3": "url('/img-3.png')",
         "bg-img-4": "url('/img-4.png')",
         "feature-bg": "url('/feature-bg.png')",
-        pattern: "url('/pattern.png')",
+        "pattern": "url('/pattern.png')",
         "pattern-2": "url('/pattern-bg.png')",
+        "bdbd": "url('/surfing_image_1.jpg')"
       },
+      gridTemplateColumns :{
+        'gallery' : 'repeat(auto-fit, minmax(250px,1fr))',
+      } ,
       screens: {
         xs: "400px",
         "3xl": "1680px",

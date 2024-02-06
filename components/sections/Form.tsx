@@ -36,6 +36,7 @@ const formSchema = z.object({
   City: z.string(),
   BoardRental: z.boolean(),
   PhoneNumber: z.string(),
+  Package: z.string(),
 });
 
 export function ApplyForm() {
@@ -48,6 +49,7 @@ export function ApplyForm() {
       City: "",
       PhoneNumber: "",
       BoardRental: false,
+      Package: "",
     },
   });
 
@@ -61,6 +63,7 @@ export function ApplyForm() {
         Country: values.Country,
         City: values.City,
         BoardRental: values.BoardRental,
+        Package: values.Package,
       };
 
       const response = await fetch(
@@ -87,10 +90,10 @@ export function ApplyForm() {
 
   return (
     <div
-      className="container flex-col flexCenter overflow-hidden items-center my-5
+      className="w-full md:grid-cols-1 xl:container overflow-hidden items-center xl:my-5
     "
     >
-      <Card className="w-550 h-870 text-blue-70">
+      <Card className="w-full h-full lg:w-550 lg:h-870 text-blue-70">
         <CardHeader>
           <CardTitle>Book Now</CardTitle>
           <CardDescription>For An Amazing Tour</CardDescription>
@@ -99,7 +102,7 @@ export function ApplyForm() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(handleSubmit)}
-              className="max-w-md w-full flex flex-wrap gap-4  text-blue-70"
+              className="grid grid-cols-1 items-stretch xl:grid-cols-2 w-full md:max-w-md  gap-2 text-blue-70"
             >
               <FormField
                 control={form.control}
@@ -182,10 +185,25 @@ export function ApplyForm() {
               />
               <FormField
                 control={form.control}
+                name="Package"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel>Package</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Package" type="text" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  );
+                }}
+              />
+              <FormField
+                control={form.control}
                 name="BoardRental"
                 render={({ field }) => {
                   return (
-                    <FormItem className="flex items-center justify-between gap-5">
+                    <FormItem className="flex items-center  justify-between gap-5">
                       <FormLabel>Board Rental</FormLabel>
                       <FormControl>
                         <Switch
@@ -199,7 +217,7 @@ export function ApplyForm() {
                 }}
               />
 
-              <Button type="submit" className="w-full btn_dark">
+              <Button type="submit" className="w-full btn_dark xl:col-span-2">
                 Submit
               </Button>
             </form>

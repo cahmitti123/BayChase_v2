@@ -17,7 +17,7 @@ const Guide = () => {
       exit="hidden"
     >
       <section ref={ref} className="flexCenter flex-col mt-10">
-        <div className=" padding-container container w-full pb-24">
+        {/* <div className=" padding-container container w-full pb-24">
           <p className="uppercase regular-18 mb-3 text-blue-70">About Us</p>
 
           <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
@@ -37,7 +37,7 @@ const Guide = () => {
               in this surf-filled adventure!
             </p>
           </div>
-        </div>
+        </div> */}
 
         <motion.div
           variants={fadeIn("up", 0)}
@@ -49,15 +49,18 @@ const Guide = () => {
             ref={refImage}
             className="flexCenter md:container relative w-full"
           >
+            <h1 className="absolute z-50 font-black text-slate-100 text-9xl  opacity-70">
+              BAYCHASER
+            </h1>
             <Image
               src="/sunset.webp"
               alt="Guide"
               width={1280}
               height={720}
-              className="w-full lg:w-[80rem] h-[25rem] object-cover object-center md:rounded-2xl"
+              className="w-full lg:w-[80rem] h-[25rem] object-cover drop-shadow-sm shadow-md object-center md:rounded-2xl"
             />
 
-            <div className="absolute flex bg-white py-8 pl-5 pr-7 gap-3 rounded-3xl border shadow-lg md:left-[5%] lg:top-20">
+            {/* <div className="absolute flex bg-white py-8 pl-5 pr-7 gap-3 rounded-3xl border shadow-lg md:left-[5%] lg:top-20">
               <Image
                 src="/meter.svg"
                 alt="Meter"
@@ -69,7 +72,7 @@ const Guide = () => {
                 <div className="flex w-full flex-col">
                   <div className="flexBetween w-full">
                     <p className="regular-16 text-gray-20">Arrivée</p>
-                    {/* <p className="bold-16 text-blue-70">52 min</p> */}
+                    <p className="bold-16 text-blue-70">52 min</p>
                   </div>
                   <p className="bold-20">Heaven</p>
                 </div>
@@ -79,7 +82,7 @@ const Guide = () => {
                   <h4 className="bold-20 whitespace-nowrap">Meeting Point</h4>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </section>
