@@ -34,10 +34,12 @@ const page = () => {
           </div>
         </div>
         <Card className="h-[700px] p-3 relative md:rounded-5xl">
-          <div
-            className="h-full w-full absolute top-0 left-0 bg-cover bg-center blur-xs drop-shadow-md md:rounded-5xl "
+          <Image
+            src="/images/DSC09721.jpeg"
+            alt="abdo"
+            fill={true}
+            className="h-full w-full absolute top-0 left-0 bg-cover bg-center blur-xs drop-shadow-md md:rounded-5xl overflow-hidden object-cover"
             style={{
-              backgroundImage: "url('/images/DSC09721.jpeg')",
               transform: "scaleX(-1)",
             }}
           />
