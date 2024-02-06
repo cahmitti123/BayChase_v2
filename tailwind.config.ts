@@ -1,4 +1,3 @@
-import { Gallery } from "./app/gallery/page"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
