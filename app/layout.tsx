@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import { Navbar_v2 } from "@/components/Navbar_v2";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -40,7 +41,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className={montserrat.className}>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Navbar_v2 />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />
       </body>

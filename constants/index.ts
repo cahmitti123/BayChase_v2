@@ -1,10 +1,10 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
-  { href: "/", key: "Gallery", label: "Gallery" },
-  { href: "/", key: "about", label: "About Us" },
-  { href: "/", key: "services", label: "Services" },
-  { href: "/", key: "contact", label: "Contact Us" },
+  { href: "/about", key: "about", label: "About" },
+  { href: "/packages", key: "packages", label: "Packages" },
+  { href: "/gallery", key: "gallery", label: "Gallery" },
+  { href: "/contact", key: "contact", label: "Contact Us" },
 ];
 
 // CAMP SECTION
@@ -83,3 +83,36 @@ export const SOCIALS = {
     { icon: "FaInstagram", href: "https://www.instagram.com/baychaser/" },
   ],
 };
+
+
+
+export const BC_Packages = [
+  {
+    label : 'Package 1',
+    price : 300,
+    description : "Embark on guided surf tours led by our seasoned experts. Explore Morocco's secret waves with confidence, as our guides ensure an unforgettable surfing experience.",
+    icon : "GiSurferVan",
+    Features : ['Feature 1','Feature 2','Feature 3'],
+  },
+  {
+    label : 'Package 2',
+    price : 300,
+    description : "Embark on guided surf tours led by our seasoned experts. Explore Morocco's secret waves with confidence, as our guides ensure an unforgettable surfing experience.",
+    icon : "GiSurferVan",
+    Features : ['Feature 1','Feature 2','Feature 3'],
+  },
+  {
+    label : 'Package 3',
+    price : 300,
+    description : "Embark on guided surf tours led by our seasoned experts. Explore Morocco's secret waves with confidence, as our guides ensure an unforgettable surfing experience.",
+    icon : "GiSurferVan",
+    Features : ['Feature 1','Feature 2','Feature 3'],
+  },
+  {
+    label : 'Package 4',
+    price : 300,
+    description : "Embark on guided surf tours led by our seasoned experts. Explore Morocco's secret waves with confidence, as our guides ensure an unforgettable surfing experience.",
+    icon : "GiSurferVan",
+    Features : ['Feature 1','Feature 2','Feature 3'],
+  },
+] 

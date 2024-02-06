@@ -13,7 +13,7 @@
     @apply border-green-50 bg-green-50 px-8 py-5 text-white;
   }
   .btn_dark {
-    @apply bg-blue-70 px-8 py-4 text-white transition-all duration-300 ease-in-out hover:bg-blue-950;
+    @apply bg-blue-70 px-8   py-1 text-white transition-all duration-300 ease-in-out hover:bg-blue-950;
   }
 
   .btn_dark_mobile {
@@ -129,12 +129,12 @@
 
   /* Feature */
   .feature-phone {
-    @apply absolute top-[13%] z-10 hidden max-w-[1000px] h-auto px-5 rotate-[8deg] md:-left-16 lg:flex  3xl:left-20;
+    @apply absolute top-[13%] z-10 hidden max-w-[1000px] h-auto md:px-5 rotate-[8deg] md:-left-16 lg:flex  3xl:left-20;
   }
 
   /* Get App */
   .get-app {
-    @apply maxContainer relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-blue-70 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply maxContainer relative flex w-full  flex-col justify-between gap-5 md:gap-32 overflow-hidden bg-blue-70 bg-pattern bg-cover bg-center bg-no-repeat px-3 md:px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
   }
 }
 

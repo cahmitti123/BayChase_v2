@@ -22,30 +22,32 @@ const Hero = () => {
     >
       <section
         ref={ref}
-        className="container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row"
+        className="flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row"
       >
-        <div className="hero-map" />
+        {/* <div className="hero-map" /> */}
+        {/* <span className="absolute right-0 top-0 opacity-40 bg-blue-70 w-full h-screen z-10" /> */}
+        <video
+          src="/hero_vid.mp4"
+          autoPlay
+          loop
+          muted
+          className="absolute right-0 top-0 h-screen w-full opacity-70 object-cover z-[-1]"
+        />
 
         <div
           ref={refInfo}
-          className="relative z-20 flex flex-1 flex-col xl:w-1/2"
+          className="relative z-20 flex flex-auto  flex-col xl:max-w-[32.5rem] backdrop-blur-md bg-slate-50 bg-opacity-60 p-5 rounded-2xl  drop-shadow-2xl"
         >
-          <h1 className="bold-52 lg:bold-64 xl:whitespace-nowrap tracking-tighter text-blue-70">
-            Embark on Epic <br />
-            Surfing Journeys <br />
-            with US
+          <h1 className="bold-52 lg:bold-64  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
+            Embark on Epic Surfing Journeys with US
           </h1>
-          <h3 className="mt-4 bold-20 lg:bold-20 xl:whitespace-nowrap tracking-tighter text-blue-70">
+          <h3 className="mt-4 bold-20 lg:bold-20  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
             Your Gateway to Morocco's Hidden Waves
           </h3>
-          <p className="regular-16 mt-6 text-gray-30 xl:max-w-[32.5rem]">
+          <p className="regular-16 mt-6 text-black xl:max-w-[32.5rem]">
             Unleash the thrill of untouched waves in Morocco with BayChaser. Our
             expert guides curate unforgettable surf adventures, revealing secret
-            spots that redefine the surfing experience. Choose freedom – let us
-            handle logistics, coaching, and equipment. Your only task? Immerse
-            yourself in the magic of the ocean. Join BayChaser for a surf
-            odyssey unlike any other, where every wave tells a story and every
-            moment is a triumph.
+            spots that redefine the surfing experience.
           </p>
 
           <div className="my-11 flex flex-wrap gap-5">
@@ -80,5 +82,91 @@ const Hero = () => {
     </motion.div>
   );
 };
+
+// const Hero = () => {
+//   return (
+//     <div className="relative overflow-hidden bg-slate-200">
+//       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+//         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+//           <div className="sm:max-w-lg">
+//             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+//               title
+//             </h1>
+//             <p className="mt-4 text-xl text-gray-500">long ass description</p>
+//           </div>
+//           <div>
+//             <div className="mt-10">
+//               {/* Decorative image grid */}
+//               <div
+//                 aria-hidden="true"
+//                 className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
+//               >
+//                 <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+//                   <div className="flex items-center space-x-6 lg:space-x-8">
+//                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+//                         <img
+//                           src="/images/DSC09721.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg">
+//                         <img
+//                           src="/images/IMG_3352.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                     </div>
+//                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg">
+//                         <img
+//                           src="/images/IMG_3355.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg">
+//                         <img
+//                           src="/images/IMG_3356.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg">
+//                         <img
+//                           src="/images/IMG_3358.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                     </div>
+//                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg">
+//                         <img
+//                           src="/images/IMG_3350.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                       <div className="h-64 w-44 overflow-hidden rounded-lg">
+//                         <img
+//                           src="/images/IMG_3594.jpeg"
+//                           alt=""
+//                           className="h-full w-full object-cover object-center"
+//                         />
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default Hero;
