@@ -40,17 +40,12 @@ export default function ImgContainer(image: LocalPhoto): JSX.Element {
         </div>
       </DialogTrigger>
       <DialogContent className="m-10 w-full h-screen max-h-[60%] max-w-[60%]  ">
-        <DialogHeader>
-          <DialogTitle>test</DialogTitle>
-          <DialogDescription>test</DialogDescription>
-        </DialogHeader>
         <Image
           src={image.src}
           alt={image.alt}
           fill={true}
           className="object-cover"
         />
-        <DialogFooter>test</DialogFooter>
       </DialogContent>
     </Dialog>
   );

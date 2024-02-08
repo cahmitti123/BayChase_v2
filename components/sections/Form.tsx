@@ -1,10 +1,13 @@
+// /app/components/sections/Form.tsx
+
 "use client";
 
 import * as React from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
+import { PACKAGES } from "@/constants/content";
 import {
   Form,
   FormControl,
@@ -23,6 +26,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
@@ -31,7 +43,7 @@ const formSchema = z.object({
   FullName: z.string().min(3, {
     message: "The Name Must Be At Least 3 Characters",
   }),
-  Email: z.string(),
+  Email: z.string().email(),
   Country: z.string(),
   City: z.string(),
   BoardRental: z.boolean(),
@@ -47,45 +59,36 @@ export function ApplyForm() {
       Email: "",
       Country: "",
       City: "",
-      PhoneNumber: "",
       BoardRental: false,
+      PhoneNumber: "",
       Package: "",
     },
   });
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+    const data = {
+      FullName: values.FullName,
+      PhoneNumber: values.PhoneNumber,
+      Email: values.Email,
+      Country: values.Country,
+      City: values.City,
+      BoardRental: values.BoardRental,
+      Package: values.Package,
+    };
     try {
-      // Transform the form values into the expected data structure
-      const data = {
-        FullName: values.FullName,
-        PhoneNumber: values.PhoneNumber,
-        Email: values.Email,
-        Country: values.Country,
-        City: values.City,
-        BoardRental: values.BoardRental,
-        Package: values.Package,
-      };
-
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwlXfZ7JVlL1NXy6b5bolNhxqFqEV5CZ5wjL-C8LUVElsPYprP-g4w6sWJ8S-LjDWzPFw/exec",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.ok) {
-        console.log("Form submitted successfully");
-        form.reset();
-      } else {
-        console.error("Error submitting form:", response.statusText);
-      }
+      const response = await fetch("api/Reservation", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) throw new Error(await response.text());
     } catch (error) {
       console.error("Error submitting form:", error);
     }
+    // console.log(data);
   };
 
   return (
@@ -95,7 +98,7 @@ export function ApplyForm() {
     >
       <Card className="w-full h-full lg:w-550 lg:h-870 text-blue-70">
         <CardHeader>
-          <CardTitle>Book Now</CardTitle>
+          <CardTitle>Book Now!</CardTitle>
           <CardDescription>For An Amazing Tour</CardDescription>
         </CardHeader>
         <CardContent>
@@ -191,7 +194,27 @@ export function ApplyForm() {
                     <FormItem>
                       <FormLabel>Package</FormLabel>
                       <FormControl>
-                        <Input placeholder="Package" type="text" {...field} />
+                        <Select onValueChange={field.onChange}>
+                          <SelectTrigger className="w-[180px]">
+                            <SelectValue placeholder="Select a package" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectGroup>
+                              <SelectLabel className="text-blue-70">
+                                Packages
+                              </SelectLabel>
+                              {PACKAGES.map((pkg, index) => (
+                                <SelectItem
+                                  key={index}
+                                  value={pkg.label}
+                                  className="text-blue-70"
+                                >
+                                  {pkg.label}
+                                </SelectItem>
+                              ))}
+                            </SelectGroup>
+                          </SelectContent>
+                        </Select>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
