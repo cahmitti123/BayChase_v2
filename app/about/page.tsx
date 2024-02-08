@@ -15,14 +15,23 @@ const page = () => {
             <h2 className="regular-24 md:regular-32 2xl:regular-64 text-white">
               <strong>Who Am I : </strong>
               <br />
-              Here We Should Say Something
             </h2>
             <p className="regular-14 xl:regular-16 mt-5 text-white">
-              Dive into our gallery, where every image tells a story of
-              extraordinary surf tours. Let the visuals inspire your next
-              adventure with BayChaser. Discover the allure of Morocco's hidden
-              waves through our lens, inviting you to join a surfing experience
-              that transcends the ordinary.
+              I'm Abdou, commonly known as the <strong>"Classic Boy"</strong>.
+              With several years of personal surfing experience and over 8 years
+              of teaching, I've evolved into a certified surf instructor,
+              holding a level 1 certification from the Royal Moroccan Surf &
+              Bodyboard Federation. I offer highly personalized surf coaching in
+              the beautiful coastal town of Imsouane and its surroundings.
+              <br />
+              Whether you're a beginner or an advanced surfer, I provide private
+              coaching and group lessons for both adults and kids, complete with
+              video analysis. <br />
+              My top priority is to establish a secure and enjoyable learning
+              environment.
+              <br />
+              Join me on the southern coast of Morocco, and let's share the most
+              unique and unforgettable journey together.
             </p>
             <Image
               src="/quote.svg"

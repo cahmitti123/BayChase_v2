@@ -52,12 +52,14 @@ export function Navbar_v2() {
         <MobileMenu />
       </div>
       <div className="lg:flexCenter hidden">
-        <Button
-          type="button"
-          title="Book"
-          // icon_start={<LuUser2 size={20} />}
-          variant="btn_dark"
-        />
+        <Link href="/#booking">
+          <Button
+            type="button"
+            title="Book Now!"
+            // icon_start={<LuUser2 size={20} />}
+            variant="btn_dark"
+          />
+        </Link>
       </div>
     </div>
   );
@@ -73,7 +75,13 @@ export function MobileMenu() {
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
           <div className="py-4">
-            <Button type="button" title="Book" variant="btn_dark_mobile" />
+            <Link href="/#booking">
+              <Button
+                type="button"
+                title="Book Now!"
+                variant="btn_dark_mobile"
+              />
+            </Link>
           </div>
           <Separator className="my-4" />
           <SheetDescription className="pt-4">

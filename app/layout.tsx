@@ -38,6 +38,7 @@ export default function RootLayout({
         />
         <meta property="og:image" content="/logo.png" />
         <link rel="icon" type="image/png" href="/favicon.ico" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className={montserrat.className}>

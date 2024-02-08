@@ -13,8 +13,9 @@ const ReservationSchema = new Schema( {
     City:String,
     Country:String,
     Email:String,
+    SurfedBefore:String,
     Package:String,
-    BoardRental:Boolean,
+    Photographer:Boolean,
 },{
     timestamps: true,
 })
