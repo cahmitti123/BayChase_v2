@@ -21,9 +21,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flexCenter mb-24">
+    <footer className="flexCenter mb-24 pt-10 text-blue-70">
       <div className="padding-container container flex w-full flex-col gap-14">
-        <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
+        <div className="flex flex-col items-start justify-between gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
             <Image
               src="/logo.png"
@@ -34,23 +34,26 @@ const Footer = () => {
               className="w-40 h-auto"
             />
           </Link>
-
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
-            {FOOTER_LINKS.map((columns) => (
-              <FooterColumn title={columns.title} key={columns.title}>
-                <ul className="regular-14 flex flex-col gap-4 text-gray-30">
-                  {columns.links.map((link) => (
-                    <Link
-                      href="/"
-                      key={link}
-                      className="transition-all duration-300 hover:text-green-50 hover:font-bold"
-                    >
-                      {link}
-                    </Link>
-                  ))}
-                </ul>
+            <div className="flex flex-col gap-5">
+              <FooterColumn title="Contact Info">
+                <div className="flex flex-col ">
+                  <div className="flex flex-row items-center gap-2">
+                    <strong className="">Tel : </strong>
+                    <div>+212 7 01 36 49 78</div>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <strong className="">Email :</strong>
+                    <div> xxxx@gmail.com</div>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <strong className="">Address :</strong>
+                    <div> Imsouane, Morocco North of Africa</div>
+                  </div>
+                </div>
               </FooterColumn>
-            ))}
+            </div>
+
             <div className="flex flex-col gap-5">
               <FooterColumn title={SOCIALS.title} key={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-30">

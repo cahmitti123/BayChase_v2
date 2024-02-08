@@ -20,7 +20,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`flexCenter gap-3 rounded-full border ${variant} ${
+      className={`flexCenter gap-3 rounded-full h-12 border ${variant} ${
         full && "w-full"
       }`}
     >
