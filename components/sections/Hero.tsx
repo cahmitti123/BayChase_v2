@@ -6,6 +6,7 @@ import Button from "../common/Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/animation/variants";
 import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 
 const Hero = () => {
   const [ref, inView] = useInView({ triggerOnce: false });
@@ -69,13 +70,14 @@ const Hero = () => {
 
           <div className="flex flex-col w-full gap-3 sm:flex-row">
             <Button type="button" title="Book Now!" variant="btn_dark" />
-
-            <Button
-              type="button"
-              title="What do we offer?"
-              variant="btn_white_text"
-              icon_start={<HiPlay size={32} className="text-blue-70" />}
-            />
+            <Link href="/packages">
+              <Button
+                type="button"
+                title="What do we offer?"
+                variant="btn_white_text"
+                icon_start={<HiPlay size={32} className="text-blue-70" />}
+              />
+            </Link>
           </div>
         </div>
       </section>

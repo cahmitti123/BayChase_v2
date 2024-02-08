@@ -14,9 +14,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export function CarouselSpacing() {
   const truncateText = (text: string, maxLength: number) => {
@@ -35,14 +35,14 @@ export function CarouselSpacing() {
       ]}
       opts={{ align: "start", loop: true }}
       orientation="vertical"
-      className="w-full md:w-2/5 mt-16 md:mt-3 xl:-mt-32"
+      className="w-full md:w-2/5 mt-16 md:mt-3 xl:-mt-9"
     >
       <CarouselContent className="-mt-1 h-[250px]">
         {PACKAGES.map((pkg, index) => (
           <CarouselItem key={index} className="pt-1 md:basis-1">
             <div className="p-1">
-              <Card className="backdrop-blur-sm bg-blue-200 bg-opacity-10">
-                <CardContent className="flex flex-col">
+              <Card className="backdrop-blur-sm bg-blue-200 cursor-pointer bg-opacity-10 hover:bg-blue-70 hover:backdrop-blur-sm hover:bg-opacity-10 transition-all delay-300">
+                <CardContent className="flex flex-col ">
                   <div className="flex flex-row justify-between items-center py-3 w-full">
                     <Link
                       href={pkg.href}
@@ -50,7 +50,14 @@ export function CarouselSpacing() {
                     >
                       {pkg.label}
                     </Link>
-                    <Badge variant={"secondary"}>{pkg.price} €</Badge>
+                    <Button
+                      variant="default"
+                      title="test"
+                      className="bg-blue-70 py-1 rounded-full h-auto  hover:bg-slate-400"
+                      type="button"
+                    >
+                      <Link href={"/packages"}>Read More</Link>
+                    </Button>
                   </div>
                   <p className="w-2/3">{truncateText(pkg.description, 80)}</p>
                 </CardContent>
