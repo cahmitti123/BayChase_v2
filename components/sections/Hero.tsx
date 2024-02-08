@@ -34,8 +34,9 @@ const Hero = () => {
           muted
           className="absolute right-0 top-0 h-screen w-full opacity-70 object-cover z-[-1]"
         />
+        <div className="h-screen -mb-36" />
 
-        <div
+        {/* <div
           ref={refInfo}
           className="relative z-20 flex flex-auto  flex-col xl:max-w-[32.5rem] backdrop-blur-md bg-slate-50 bg-opacity-60 p-5 rounded-2xl  drop-shadow-2xl"
         >
@@ -81,7 +82,7 @@ const Hero = () => {
               />
             </Link>
           </div>
-        </div>
+        </div> */}
       </section>
     </motion.div>
   );

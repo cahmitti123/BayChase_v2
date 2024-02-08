@@ -42,7 +42,7 @@ const BookForm = () => {
                 moment – your surf odyssey awaits!
               </p>
             </div>
-            <div className="flex flex-1 items-center justify-end visible xl:invisible">
+            <div className="flex-1 items-center justify-center  lg:justify-end  visible xl:invisible">
               <ApplyForm />
             </div>
           </div>
