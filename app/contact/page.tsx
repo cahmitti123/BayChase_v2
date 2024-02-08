@@ -11,7 +11,7 @@ const api_key_maps = "AIzaSyAFpqjkXRHWEaewAl1_6JyJE9sdRme9Tx0";
 
 const Contact = () => {
   return (
-    <Card className="flex flex-col items-center justify-between gap-4 pb-10 text-blue-70 pt-4">
+    <Card className="flex flex-col  items-center justify-between gap-4 pb-10 text-blue-70 pt-4">
       <h1 className="bold-52 lg:bold-64 mb-5  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
         Contact Us
       </h1>
@@ -21,7 +21,7 @@ const Contact = () => {
       </p>
 
       <Separator className="my-4" />
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col items-center justify-between ">
           <div className="grid grid-cols-2">
             <strong>Tel : </strong>
@@ -41,7 +41,7 @@ const Contact = () => {
           />
         </div>
         <div className="container grid gap-4 py-4 w-full h-full">
-          <div className="flex fex-col justify-between w-full items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 justify-between w-full items-center gap-4">
             <div className="w-full items-center gap-4">
               <Label htmlFor="FullName" className="text-right">
                 Full Name

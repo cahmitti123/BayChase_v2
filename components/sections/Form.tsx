@@ -96,7 +96,7 @@ export function ApplyForm() {
   return (
     <section id="booking">
       <div
-        className="w-full md:grid-cols-1 xl:container overflow-hidden items-center xl:my-5
+        className="w-full md:grid-cols-1 xl:container overflow-hidden items-center  xl:my-5
     "
       >
         <Card className="w-full h-full lg:w-550 lg:h-870 text-blue-70">
@@ -302,7 +302,10 @@ export function ApplyForm() {
                   }}
                 />
 
-                <Button type="submit" className="w-full btn_dark xl:col-span-2">
+                <Button
+                  type="submit"
+                  className="w-full mt-4 btn_dark xl:col-span-2"
+                >
                   Submit
                 </Button>
               </form>
