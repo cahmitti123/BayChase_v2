@@ -21,15 +21,15 @@ const Contact = () => {
       </p>
 
       <Separator className="my-4" />
-      <div className="flex flex-col md:flex-row items-center justify-between">
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
         <div className="flex flex-col items-center justify-between ">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-3">
             <strong>Tel : </strong>
-            <div>+212 7 01 36 49 78</div>
+            <div className="col-span-2">+212 7 01 36 49 78</div>
             <strong>Email :</strong>
-            <div> xxxx@gmail.com</div>
+            <div className="col-span-2">baychaiser.club@gmail.com</div>
             <strong>Address :</strong>
-            <div> Imsouane, Morocco North of Africa</div>
+            <div className="col-span-2"> Imsouane, Morocco North of Africa</div>
           </div>
           {/* <Separator className="my-4" /> */}
 

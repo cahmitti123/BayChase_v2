@@ -34,9 +34,9 @@ const Hero = () => {
           muted
           className="absolute right-0 top-0 h-screen w-full opacity-70 object-cover z-[-1]"
         />
-        <div className="h-screen -mb-36" />
+        {/* <div className="h-screen -mb-36" /> */}
 
-        {/* <div
+        <div
           ref={refInfo}
           className="relative z-20 flex flex-auto  flex-col xl:max-w-[32.5rem] backdrop-blur-md bg-slate-50 bg-opacity-60 p-5 rounded-2xl  drop-shadow-2xl"
         >
@@ -52,7 +52,7 @@ const Hero = () => {
             spots that redefine the surfing experience.
           </p>
 
-          <div className="my-11 flex flex-wrap gap-5">
+          {/* <div className="my-11 flex flex-wrap gap-5">
             <div className="flex items-center gap-2">
               {Array(5)
                 .fill(1)
@@ -67,9 +67,9 @@ const Hero = () => {
                 Appreciated our services
               </span>
             </p>
-          </div>
+          </div> */}
 
-          <div className="flex flex-col w-full gap-3 sm:flex-row">
+          <div className="flex flex-col pt-8 w-full gap-3 sm:flex-row">
             <Link href="/#booking">
               <Button type="button" title="Book Now!" variant="btn_dark" />
             </Link>
@@ -82,7 +82,7 @@ const Hero = () => {
               />
             </Link>
           </div>
-        </div> */}
+        </div>
       </section>
     </motion.div>
   );

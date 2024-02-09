@@ -80,17 +80,18 @@ const Features = () => {
           <h2 className="bold-32 lg:bold-64 text-blue-70">Our Packages</h2>
 
           <div className="w-full">
-            <div className="flexEnd mt-5 md:mt-10 md:px-6 lg:-mt-60 z-50 relative text-center md:text-left">
+            <div className="flexEnd -mr-0 md:-mr-9 xl:-mr-0 mt-5 md:mt-10 md:px-6 lg:-mt-60 z-50 relative text-center md:text-left">
               <div className="bg-blue-70 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:p-12 relative w-full overflow-hidden rounded-3xl drop-shadow-2xl">
                 <h2 className="regular-24 md:regular-32 2xl:regular-64 text-white">
                   <strong>Surfing Magic: </strong>BayChaser's Unseen Wonders!
                 </h2>
                 <p className="regular-14 xl:regular-16 mt-5 text-white">
-                  Dive into our gallery, where every image tells a story of
-                  extraordinary surf tours. Let the visuals inspire your next
-                  adventure with BayChaser. Discover the allure of Morocco's
-                  hidden waves through our lens, inviting you to join a surfing
-                  experience that transcends the ordinary.
+                  Discover our range of surfing packages tailored to every skill
+                  level. From beginners to seasoned surfers, our expert-guided
+                  sessions ensure an unforgettable experience. Choose from
+                  private lessons or group packages, all including equipment and
+                  optional photography services. Dive into the waves and elevate
+                  your surfing journey with us.
                 </p>
                 <Image
                   src="/quote.svg"
