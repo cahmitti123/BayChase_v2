@@ -16,7 +16,7 @@ const page = () => {
               <strong>Who Am I : </strong>
               <br />
             </h2>
-            <p className="regular-14 xl:regular-16 mt-5 text-white">
+            <p className="regular-12 xl:regular-16 mt-5 text-white">
               I'm Abdou, commonly known as the <strong>"Classic Boy"</strong>.
               With several years of personal surfing experience and over 8 years
               of teaching, I've evolved into a certified surf instructor,
@@ -47,10 +47,7 @@ const page = () => {
             src="/images/DSC09721.jpeg"
             alt="abdo"
             fill={true}
-            className="h-full w-full absolute top-0 left-0 bg-cover bg-center blur-xs drop-shadow-md md:rounded-5xl overflow-hidden object-cover"
-            style={{
-              transform: "scaleX(-1)",
-            }}
+            className="h-full w-full absolute top-0 left-0 bg-cover bg-center blur-xs drop-shadow-md md:rounded-5xl overflow-hidden object-cover transform -scale-x-100"
           />
         </Card>
       </div>

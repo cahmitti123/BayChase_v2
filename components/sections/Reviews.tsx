@@ -26,28 +26,28 @@ export function AvatarDemo() {
 
 const REVIEWS = [
   {
-    fullName: "Chouaib AHMITTI",
+    fullName: "Sarah",
     rating: 4,
     comment:
-      "It was super awesome, i really enjoyed the tour and everything else was just amazing.",
+      "Absolutely fantastic experience! The instructors were knowledgeable and friendly, making the whole surfing adventure unforgettable.",
   },
   {
-    fullName: "Chouaib AHMITTI",
+    fullName: "Mike",
     rating: 4,
     comment:
-      "It was super awesome, i really enjoyed the tour and everything else was just amazing. ",
+      "The beginner package kickstarted my surfing journey. Patient instructors, great equipment, and stunning photography options made it a memorable experience!",
   },
   {
-    fullName: "Chouaib AHMITTI",
+    fullName: "Jack",
     rating: 4,
     comment:
-      "It was super awesome, i really enjoyed the tour and everything else was just amazing.",
+      "Refined my skills and took my surfing to the next level. Instructors provided invaluable feedback, and the small group setting was perfect for personalized attention.",
   },
   {
-    fullName: "Chouaib AHMITTI",
+    fullName: "Emily",
     rating: 4,
     comment:
-      "It was super awesome, i really enjoyed the tour and everything else was just amazing.",
+      "The private lesson accelerated my progress, and having a dedicated photographer capture the moments made it truly special.",
   },
 ];
 
@@ -64,7 +64,7 @@ export function CarouselSize() {
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
+                <CardContent className="flex flex-col aspect-auto items-center justify-center gap-4 p-6 h-full">
                   <div className="flex flex-row  justify-left items-center">
                     <AvatarDemo />
                     <span className="text-lg pl-4 font-semibold">
@@ -152,8 +152,8 @@ const Reviews = () => {
         Reviews
       </h3>
       <p className="text-center mb-5">
-        This is some text here that we should put on so the visitor knows what
-        this section is about.
+        Share your experience with us and let others know about your surfing
+        adventure!
       </p>
       <Separator className="my-4" />
       <CarouselPlugin />

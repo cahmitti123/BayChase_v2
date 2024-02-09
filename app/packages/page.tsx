@@ -22,12 +22,12 @@ const packages = () => {
         mind :
       </p>
       <p className="text-sm text-left text-blue-70">
-        Minimum duration for all packages is 2 to 3 days. <br /> A 10% discount
-        is applied for groups of more than 2 people. <br />A surf session lasts
-        2 hours.
+        - Minimum duration for all packages is 2 to 3 days. <br />
+        - A 10% discount is applied for groups of more than 2 people. <br />
+        - A surf session lasts 2 hours.
         <br />
-        Group lessons are limited to a maximum of 4 people. <br />
-        All prices are p.p (per person)
+        - Group lessons are limited to a maximum of 4 people. <br />- All prices
+        are p.p (per person)
       </p>
       <Separator className="my-4" />
       <Card className="md:p-4 drop-shadow-2xl bg-gradient-to-br from-slate-100 to-slate-200 bg-gradient-opacity-50 backdrop-blur-md">
@@ -81,7 +81,7 @@ const packages = () => {
                         </Badge>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="px-3 text-blue-70 text-xs">
+                    <AccordionContent className="px-1 text-blue-70 text-xs">
                       {feature.description}
                     </AccordionContent>
                   </AccordionItem>
