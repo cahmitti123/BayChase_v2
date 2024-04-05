@@ -55,7 +55,7 @@ export function Navbar_v2() {
         <Link href="/#booking">
           <Button
             type="button"
-            title="Book Now!"
+            title="Book Now !"
             // icon_start={<LuUser2 size={20} />}
             variant="btn_dark"
           />
@@ -78,7 +78,7 @@ export function MobileMenu() {
             <Link href="/#booking">
               <Button
                 type="button"
-                title="Book Now!"
+                title="Book Now !"
                 variant="btn_dark_mobile"
               />
             </Link>

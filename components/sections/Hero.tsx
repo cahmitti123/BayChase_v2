@@ -6,6 +6,8 @@ import Button from "../common/Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/animation/variants";
 import { useInView } from "react-intersection-observer";
+import { GiWaveSurfer } from "react-icons/gi";
+
 import Link from "next/link";
 
 const Hero = () => {
@@ -38,18 +40,16 @@ const Hero = () => {
 
         <div
           ref={refInfo}
-          className="relative z-20 flex flex-auto  flex-col xl:max-w-[32.5rem] backdrop-blur-md bg-slate-50 bg-opacity-60 p-5 rounded-2xl  drop-shadow-2xl"
+          className="relative z-20 flex flex-auto flex-col xl:max-w-[34rem] backdrop-blur-md bg-slate-50 bg-opacity-60 p-5 rounded-2xl  drop-shadow-2xl"
         >
-          <h1 className="bold-52 lg:bold-64  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
-            Embark on Epic Surfing Journeys with US
+          <h1 className="bold-52 uppercase lg:bold-64 tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
+          Join us for Epic Surfing Journeys
           </h1>
-          <h3 className="mt-4 bold-20 lg:bold-20  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
+          <h3 className="bold-20 mt-4 lg:bold-20  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
             Your Gateway to Morocco's Hidden Waves
           </h3>
-          <p className="regular-16 mt-6 text-black xl:max-w-[32.5rem]">
-            Unleash the thrill of untouched waves in Morocco with BayChaser. Our
-            expert guides curate unforgettable surf adventures, revealing secret
-            spots that redefine the surfing experience.
+          <p className="regular-16 text-black xl:max-w-[32.5rem]">
+          With years of surf expertise, Bay Chaser is dedicated to providing exceptional customer service. We offer a range of services including guided surf tours, personalized coaching sessions, and accommodation options tailored to your needs.
           </p>
 
           {/* <div className="my-11 flex flex-wrap gap-5">
@@ -71,14 +71,14 @@ const Hero = () => {
 
           <div className="flex flex-col pt-8 w-full gap-3 sm:flex-row">
             <Link href="/#booking">
-              <Button type="button" title="Book Now!" variant="btn_dark" />
+              <Button type="button" title="Book Now !" variant="btn_dark" />
             </Link>
             <Link href="/packages">
               <Button
                 type="button"
-                title="What do we offer?"
+                title="What do we offer ?"
                 variant="btn_white_text"
-                icon_start={<HiPlay size={32} className="text-blue-70" />}
+                icon_start={<GiWaveSurfer size={32} className="text-blue-70 rounded-full" />}
               />
             </Link>
           </div>

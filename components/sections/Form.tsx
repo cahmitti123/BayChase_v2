@@ -101,7 +101,7 @@ export function ApplyForm() {
       >
         <Card className="w-full h-full lg:w-550 lg:h-870 text-blue-70">
           <CardHeader>
-            <CardTitle>Book Now!</CardTitle>
+            <CardTitle>Book Now !</CardTitle>
             <CardDescription>For An Amazing Tour</CardDescription>
           </CardHeader>
           <CardContent>

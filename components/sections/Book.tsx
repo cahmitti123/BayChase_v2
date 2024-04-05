@@ -19,7 +19,7 @@ const BookForm = () => {
       <section
         id="book"
         ref={ref}
-        className="flexCenter w-full flex-col pb-28 xl:pb-52 mt-2 md:mt-5 relative"
+        className="flexCenter w-full flex-col pb-28 xl:pb-2 mt-2 md:mt-5 relative"
       >
         <motion.div
           variants={fadeIn("down", 0)}
@@ -34,12 +34,7 @@ const BookForm = () => {
                 Seize Your Wave : Reserve Your Surfing Adventure Now!
               </h2>
               <p className="regular-16 text-gray-10">
-                Embark on an epic surfing journey with BayChaser! Dive into the
-                thrill of Morocco's hidden waves by securing your spot now. Our
-                booking form is your gateway to surf adventure. Fill it out, and
-                let anticipation build for a surf experience that promises
-                excitement, camaraderie, and unforgettable memories. Seize the
-                moment – your surf odyssey awaits!
+              Get ready for an incredible surfing adventure with BayChaser! Explore the excitement of Morocco's hidden waves by reserving your spot today. Our booking form is your ticket to surf fun. Just fill it out and get ready for an experience full of thrills, good times, and unforgettable memories. Don't miss out – your surf journey is waiting for you !
               </p>
             </div>
             <div className="flex-1 items-center justify-center  lg:justify-end  visible xl:invisible">

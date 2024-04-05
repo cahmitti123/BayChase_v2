@@ -81,6 +81,9 @@ export const SOCIALS = {
   title: "Social",
   links: [
     { icon: "FaInstagram", href: "https://www.instagram.com/baychaser/" },
+    // { icon: "FaFacebook", href: "https://www.facebook.com/baychaser/" },
+    { icon: "MdOutlineAlternateEmail", href: "https://www.facebook.com/baychaser/" },
+    { icon: "FaWhatsapp", href: "https://www.facebook.com/baychaser/" },
   ],
 };
 
