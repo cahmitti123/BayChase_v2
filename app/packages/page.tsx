@@ -35,10 +35,11 @@ const packages = () => {
           {PACKAGES.map((pkg, index) => (
             <Card
               key={index}
-              className={`flex flex-col p-3 w-full h-full bg-feature-bg bg-cover bg-no-repeat drop-shadow-md  ${
+              className={`flex flex-col justify-between p-3 w-full h-full bg-feature-bg bg-opacity-5 bg-cover bg-no-repeat drop-shadow-md  ${
                 pkg.type === "Guiding" ? "col-span-1 xl:col-span-3 " : ""
               }`}
             >
+              <div>
               <div className="flex flex-col items-center md:flex-row md:justify-between md:w-full h-auto ">
                 <h3 className="text-blue-70 text-xl font-bold">{pkg.label}</h3>
                 <div className="flex flex-col items-center md:flex-row">
@@ -63,6 +64,8 @@ const packages = () => {
                   <strong className="">Description :</strong> {pkg.description}
                 </p>
               </div>
+              </div>
+              <div>
               <strong className="p-1  text-blue-70">
                 Additional Features :{" "}
               </strong>
@@ -87,6 +90,7 @@ const packages = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+              </div>
             </Card>
           ))}
         </div>

@@ -11,20 +11,19 @@ const api_key_maps = "AIzaSyAFpqjkXRHWEaewAl1_6JyJE9sdRme9Tx0";
 
 const Contact = () => {
   return (
-    <Card className="flex flex-col  items-center justify-between gap-4 pb-10 text-blue-70 pt-4">
-      <h1 className="bold-52 lg:bold-64 mb-5  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
+    <Card className="flex flex-col  items-center justify-between gap-4 pb-5 text-blue-70 pt-4">
+      <h1 className="bold-52 lg:bold-64 mb-2  tracking-tighter text-blue-70 xl:max-w-[32.5rem]">
         Contact Us
       </h1>
       <p className=" text-center text-blue-70">
-        Here are the packages and the surf sessions we offer, please keep in
-        mind
+      Ready to ride the waves with Bay Chaser ? Contact us to get all the info you need for your next surf adventure !
       </p>
 
       <Separator className="my-4" />
       <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
         <div className="flex flex-col items-center justify-between ">
           <div className="grid grid-cols-3">
-            <strong>Tel : </strong>
+            <strong>Phone : </strong>
             <div className="col-span-2">+212 7 01 36 49 78</div>
             <strong>Email :</strong>
             <div className="col-span-2">baychaiser.club@gmail.com</div>
@@ -46,26 +45,26 @@ const Contact = () => {
               <Label htmlFor="FullName" className="text-right">
                 Full Name
               </Label>
-              <Input id="FullName" defaultValue="Full Name" className="" />
+              <Input id="FullName" placeholder="Full Name" className="" />
             </div>
             <div className="w-full items-center gap-4">
               <Label htmlFor="Phone" className="text-right">
                 Phone Number
               </Label>
-              <Input id="Phone" defaultValue="Phone Number" className="" />
+              <Input id="Phone" placeholder="Phone Number" className="" />
             </div>
             <div className="w-full items-center gap-4">
               <Label htmlFor="Email" className="text-right">
                 Email
               </Label>
-              <Input id="Email" defaultValue="Email" className="" />
+              <Input id="Email" placeholder="Email" className="" />
             </div>
           </div>
           <div className="items-center gap-4">
             <Label htmlFor="Message" className="text-right">
               Message
             </Label>
-            <Textarea id="Message" defaultValue="Message" className="" />
+            <Textarea id="Message" className="" style={{ resize: 'none' , height: '100px'}} placeholder="Message" />
           </div>
           <Button className="bg-blue-70">Send</Button>
         </div>

@@ -2,19 +2,23 @@ import { FOOTER_LINKS, SOCIALS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+
 
 import {
   FaLinkedinIn,
   FaInstagram,
   FaXTwitter,
   FaGithub,
+  FaFacebook,
+  FaWhatsapp
 } from "react-icons/fa6";
 
 const iconMap: { [key: string]: JSX.Element } = {
-  FaLinkedinIn: <FaLinkedinIn size={20} />,
   FaInstagram: <FaInstagram size={20} />,
-  FaXTwitter: <FaXTwitter size={20} />,
-  FaGithub: <FaGithub size={20} />,
+  FaWhatsapp: <FaWhatsapp size={20} />,
+  FaFacebook: <FaFacebook size={20} />,
+  MdOutlineAlternateEmail: <MdOutlineAlternateEmail size={20} />,
 };
 
 const Footer = () => {
@@ -39,7 +43,7 @@ const Footer = () => {
               <FooterColumn title="Contact Info">
                 <div className="flex flex-col ">
                   <div className="flex flex-row items-center gap-2">
-                    <strong className="">Tel : </strong>
+                    <strong className="">Phone : </strong>
                     <div>+212 7 01 36 49 78</div>
                   </div>
                   <div className="flex flex-row items-center gap-2">
@@ -62,7 +66,7 @@ const Footer = () => {
                       key={link.href}
                       target="_blank"
                       href={link.href}
-                      className="transition-all duration-300 hover:text-green-50"
+                      className="transition-all duration-300 hover:text-blue-70"
                     >
                       {iconMap[link.icon]}
                     </Link>
@@ -76,7 +80,7 @@ const Footer = () => {
         <div className="border bg-gray-20" />
 
         <p className="regular-14 w-full text-center text-gray-30">
-          &copy; {currentYear} BayChaser | Your Gide To Secret Places. - Morocco
+          &copy; {currentYear} BayChaser | Your Gateway to Morocco's Hidden Waves. - Morocco
           {/* par{" "}
           <Link
             className="transition-all duration-300 hover:text-blue-70 hover:font-bold"
