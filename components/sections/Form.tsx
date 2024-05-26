@@ -46,7 +46,7 @@ const formSchema = z.object({
   Email: z.string().email(),
   Country: z.string(),
   City: z.string(),
-  Photographer: z.boolean(),
+  Photographer: z.string(),
   PhoneNumber: z.string(),
   Package: z.string(),
   SurfedBefore: z.string(),
@@ -60,7 +60,7 @@ export function ApplyForm() {
       Email: "",
       Country: "",
       City: "",
-      Photographer: false,
+      Photographer: "",
       PhoneNumber: "",
       Package: "",
       SurfedBefore: "",
@@ -74,7 +74,7 @@ export function ApplyForm() {
       Email: values.Email,
       Country: values.Country,
       City: values.City,
-      Photographer: values.Photographer,
+      Photographer: values.Photographer === 'Yes' ? true : false, 
       Package: values.Package,
     };
     try {

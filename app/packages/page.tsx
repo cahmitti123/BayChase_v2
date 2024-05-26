@@ -52,7 +52,7 @@ const packages = () => {
                 </div>
               </div>
               <Separator className="my-4" />
-              <Card className="h-[200px] mb-2 p-3 relative">
+              <Card className="h-[400px] mb-2 p-3 relative">
                 <div
                   className="h-full w-full absolute top-0 left-0 bg-cover bg-center blur-xs drop-shadow-md rounded-md"
                   style={{ backgroundImage: `url('${pkg.img}')` }}
