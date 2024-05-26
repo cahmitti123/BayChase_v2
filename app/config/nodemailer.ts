@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
-const email = 'baychaiser.club@gmaiil.com'
-const pass = 'baychaser@@2024'
+const email = 'baychaser.club@gmail.com'
+const pass = 'Baychaser@2024.'
 
 export const transporter = nodemailer.createTransport(
     {
@@ -16,5 +16,5 @@ export const transporter = nodemailer.createTransport(
 
 export const mailOptions = {
     from:email,
-    to:email
+    to:'ahmitti.chouaib@gmail.com'
 }
