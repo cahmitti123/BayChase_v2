@@ -53,6 +53,7 @@ const formSchema = z.object({
 });
 
 export function ApplyForm() {
+  const [isLoading, setIsLoading] = React.useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -68,13 +69,14 @@ export function ApplyForm() {
   });
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
     const data = {
       FullName: values.FullName,
       PhoneNumber: values.PhoneNumber,
       Email: values.Email,
       Country: values.Country,
       City: values.City,
-      Photographer: values.Photographer === 'Yes' ? true : false, 
+      Photographer: values.Photographer === 'Yes' ? true : false,
       Package: values.Package,
     };
     try {
@@ -87,12 +89,15 @@ export function ApplyForm() {
         },
       });
       if (!response.ok) throw new Error(await response.text());
+  
+      console.log("Form submitted successfully!");
+      form.reset();
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setIsLoading(false);
     }
-    // console.log(data);
   };
-
   return (
     <section id="booking">
       <div
@@ -304,9 +309,10 @@ export function ApplyForm() {
 
                 <Button
                   type="submit"
-                  className="w-full mt-4 btn_dark xl:col-span-2"
+                  className={`w-full mt-4 btn_dark xl:col-span-2 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  disabled={isLoading}
                 >
-                  Submit
+                  {isLoading ? 'Submitting...' : 'Submit'}
                 </Button>
               </form>
             </Form>
