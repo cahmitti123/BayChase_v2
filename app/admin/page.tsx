@@ -38,7 +38,7 @@ const Page = () => {
   const currentReservations = reservations.slice(indexOfFirstReservation, indexOfLastReservation);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber : number) => setCurrentPage(pageNumber);
 
   // Export reservations to CSV
   const exportToCSV = () => {
