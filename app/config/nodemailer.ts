@@ -1,9 +1,8 @@
-// Import the Nodemailer library
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 // Create a transporter object
 export const transporter = nodemailer.createTransport({
-  host: 'live.smtp.mailtrap.io',
+  host: 'smtp.mailtrap.io',
   port: 587,
   secure: false, // use SSL
   auth: {
@@ -12,8 +11,8 @@ export const transporter = nodemailer.createTransport({
   }
 });
 
-// Configure the mailoptions object
-export const mailOptions = {
+// Configure the mail options
+export const mailOptions: nodemailer.SendMailOptions = {
   from: 'info@demomailtrap.com',
   to: 'ahmitti.chouaib@gmail.com',
   subject: 'Sending Email using Node.js',

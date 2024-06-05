@@ -1,16 +1,30 @@
-"use client"
 import { useEffect, useState } from 'react';
 import { saveAs } from 'file-saver';
 import { unparse } from 'papaparse';
 
-const Page = () => {
-  const [reservations, setReservations] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [reservationsPerPage] = useState(6); // Change this number to adjust the number of reservations per page
-  const [authenticated, setAuthenticated] = useState(false);
-  const [password, setPassword] = useState('');
+interface Reservation {
+  _id: string;
+  FullName: string;
+  PhoneNumber: string;
+  City: string;
+  Country: string;
+  Email: string;
+  SurfedBefore: string;
+  Package: string;
+  Photographer: boolean;
+  createdAt: string;
+}
 
-  const correctPassword = 'test'; // Set your password here
+interface Props {}
+
+const Page: React.FC<Props> = () => {
+  const [reservations, setReservations] = useState<Reservation[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [reservationsPerPage] = useState<number>(6); // Change this number to adjust the number of reservations per page
+  const [authenticated, setAuthenticated] = useState<boolean>(false);
+  const [password, setPassword] = useState<string>('');
+
+  const correctPassword: string = 'test'; // Set your password here
 
   useEffect(() => {
     const fetchReservations = async () => {
@@ -33,16 +47,16 @@ const Page = () => {
   }, [authenticated]);
 
   // Get current reservations
-  const indexOfLastReservation = currentPage * reservationsPerPage;
-  const indexOfFirstReservation = indexOfLastReservation - reservationsPerPage;
-  const currentReservations = reservations.slice(indexOfFirstReservation, indexOfLastReservation);
+  const indexOfLastReservation: number = currentPage * reservationsPerPage;
+  const indexOfFirstReservation: number = indexOfLastReservation - reservationsPerPage;
+  const currentReservations: Reservation[] = reservations.slice(indexOfFirstReservation, indexOfLastReservation);
 
   // Change page
-  const paginate = (pageNumber : number) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number): void => setCurrentPage(pageNumber);
 
   // Export reservations to CSV
-  const exportToCSV = () => {
-    const formattedData = reservations.map((reservation) => ({
+  const exportToCSV = (): void => {
+    const formattedData = reservations.map((reservation: Reservation) => ({
       FullName: reservation.FullName,
       PhoneNumber: reservation.PhoneNumber,
       City: reservation.City,
@@ -59,7 +73,7 @@ const Page = () => {
     saveAs(blob, 'reservations.csv');
   };
 
-  const handleLogin = () => {
+  const handleLogin = (): void => {
     if (password === correctPassword) {
       setAuthenticated(true);
     } else {
@@ -102,7 +116,7 @@ const Page = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentReservations.length > 0 ? (
-          currentReservations.map((reservation) => (
+          currentReservations.map((reservation: Reservation) => (
             <div key={reservation._id} className="bg-white shadow-lg cursor-pointer rounded-lg p-6 transition-transform transform hover:scale-105">
               <h2 className="text-2xl font-semibold mb-3">{reservation.FullName}</h2>
               <p className="text-gray-700 mb-2"><strong>Phone Number:</strong> {reservation.PhoneNumber}</p>
@@ -130,8 +144,14 @@ const Page = () => {
   );
 };
 
-const Pagination = ({ reservationsPerPage, totalReservations, paginate }) => {
-  const pageNumbers = [];
+interface PaginationProps {
+  reservationsPerPage: number;
+  totalReservations: number;
+  paginate: (pageNumber: number) => void;
+}
+
+const Pagination: React.FC<PaginationProps> = ({ reservationsPerPage, totalReservations, paginate }) => {
+  const pageNumbers: number[] = [];
 
   for (let i = 1; i <= Math.ceil(totalReservations / reservationsPerPage); i++) {
     pageNumbers.push(i);
@@ -142,13 +162,12 @@ const Pagination = ({ reservationsPerPage, totalReservations, paginate }) => {
       <ul className="inline-flex -space-x-px">
         {pageNumbers.map(number => (
           <li key={number}>
-            <a
+            <button
               onClick={() => paginate(number)}
-              href="#!"
               className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
             >
               {number}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
