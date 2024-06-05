@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from 'react';
 import { saveAs } from 'file-saver';
 import { unparse } from 'papaparse';
