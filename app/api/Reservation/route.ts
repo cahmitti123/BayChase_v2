@@ -1,4 +1,4 @@
-import { mailOptions } from './../../config/nodemailer';
+import { mailOptions, sendWelcomeEmail } from './../../config/nodemailer';
 import { transporter } from "@/app/config/nodemailer"
 import Reservation from "../../(models)/reservation"
 import { NextRequest,NextResponse } from "next/server"
@@ -18,13 +18,8 @@ export async function POST(req: NextRequest) {
       const reservationData = body;
       await Reservation.create(reservationData);
       console.log("Reservation data saved to database:", reservationData);
-  
-      await transporter.sendMail({
-        ...mailOptions,
-        subject: 'test',
-        text: 'test',
-        html: '<h1>test</h1>'
-      });
+
+      await sendWelcomeEmail(reservationData.Email, reservationData.FullName)
       console.log("Mail sent successfully!");
       
       return NextResponse.json({ message: 'Reservation Submitted' }, { status: 201 });

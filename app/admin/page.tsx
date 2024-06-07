@@ -21,11 +21,11 @@ interface Props {}
 const Page: React.FC<Props> = () => {
   const [reservations, setReservations] = useState<Reservation[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [reservationsPerPage] = useState<number>(6); // Change this number to adjust the number of reservations per page
+  const [reservationsPerPage] = useState<number>(6);
   const [authenticated, setAuthenticated] = useState<boolean>(false);
   const [password, setPassword] = useState<string>('');
 
-  const correctPassword: string = 'test'; // Set your password here
+  const correctPassword: string = 'test';
 
   useEffect(() => {
     const fetchReservations = async () => {

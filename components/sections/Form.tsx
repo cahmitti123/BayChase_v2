@@ -37,7 +37,6 @@ import {
 } from "@/components/ui/select";
 
 import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
 
 const formSchema = z.object({
   FullName: z.string().min(3, {
