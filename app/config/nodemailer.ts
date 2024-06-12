@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { promisify } from 'util';
 
 export const transporter = nodemailer.createTransport({
   service: 'hotmail',
@@ -32,18 +33,16 @@ export const mailOptions = (recipientEmail: string, recipientName: string) => ({
   text: createWelcomeEmail(recipientName)
 });
 
-export const sendWelcomeEmail = (recipientEmail: string, recipientName: string) => {
-  const mail = mailOptions(recipientEmail, recipientName);
+const sendMail = promisify(transporter.sendMail.bind(transporter));
 
-  transporter.sendMail(mail, function(error, info){
-    if (error) {
-      console.log('-----> ',info)
-      console.log('Error:', error);
-      return info
-    } else {
-      console.log('-----> ',info)
-      console.log('Welcome Email sent to', recipientEmail);
-      return info
-    }
-  });
+export const sendWelcomeEmail = async (recipientEmail: string, recipientName: string) => {
+  const mail = mailOptions(recipientEmail, recipientName);
+  try {
+    const info: any = await sendMail(mail);
+    console.log('Welcome Email sent:', info.response);
+    return { success: true, info };
+  } catch (error) {
+    console.log('Error sending email:', error);
+    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
+  }
 };
