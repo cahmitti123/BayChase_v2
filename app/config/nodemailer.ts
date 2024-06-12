@@ -1,10 +1,10 @@
 import nodemailer from 'nodemailer';
 
 export const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'hotmail',
   auth: {
-    user: 'ahmitti.chouaib@gmail.com',
-    pass: 'syjujeaiaghnefgx',
+    user: 'baychaser.club@outlook.com',
+    pass: 'Baychaser@2024.',
   }
 });
 
@@ -26,7 +26,7 @@ const createWelcomeEmail = (recipientName: string) => {
 };
 
 export const mailOptions = (recipientEmail: string, recipientName: string) => ({
-  from: 'ahmitti.chouaib@gmail.com',
+  from: 'baychaser.club@outlook.com',
   to: recipientEmail,
   subject: 'Welcome to Bay Chaser!',
   text: createWelcomeEmail(recipientName)
