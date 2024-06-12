@@ -6,6 +6,7 @@ import * as React from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
+import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { PACKAGES } from "@/constants/content";
 import {
@@ -17,15 +18,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   Select,
   SelectContent,
@@ -35,6 +27,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 import { Input } from "@/components/ui/input";
 
@@ -52,7 +52,8 @@ const formSchema = z.object({
 });
 
 export function ApplyForm() {
-  const [isLoading, setIsLoading] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [countries, setCountries] = React.useState([]);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -66,6 +67,28 @@ export function ApplyForm() {
       SurfedBefore: "",
     },
   });
+
+  // Uks$$C_Dh47Qz49
+  // NGchOTDvT/u8580xhp09cA==B1TIqAQVouJAa7nq
+
+  React.useEffect(() => {
+    // Fetch country data
+    axios.get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        const countryOptions = response.data.map((country: any) => ({
+          label: country.name.common,
+          value: country.name.common,
+        }));
+        setCountries(countryOptions);
+      })
+      .catch((error) => {
+        console.error("Error fetching countries:", error);
+      });
+  }, []);
+
+  const handleCountryChange = (selectedOption: any) => {
+    form.setValue("Country", selectedOption.value);
+  };
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
@@ -88,7 +111,7 @@ export function ApplyForm() {
         },
       });
       if (!response.ok) throw new Error(await response.text());
-  
+
       console.log("Form submitted successfully!");
       form.reset();
     } catch (error) {
@@ -170,32 +193,42 @@ export function ApplyForm() {
                 <FormField
                   control={form.control}
                   name="Country"
-                  render={({ field }) => {
-                    return (
-                      <FormItem>
-                        <FormLabel>Country</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Country" type="text" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    );
-                  }}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Country</FormLabel>
+                      <FormControl>
+                        <Select onValueChange={(value) => handleCountryChange(value)}>
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select a country" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectGroup>
+                              <SelectLabel className="text-blue-70">Countries</SelectLabel>
+                              {countries.map((country, index) => (
+                                <SelectItem key={index} value={country.value} className="text-blue-70">
+                                  {country.label}
+                                </SelectItem>
+                              ))}
+                            </SelectGroup>
+                          </SelectContent>
+                        </Select>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
                 <FormField
                   control={form.control}
                   name="City"
-                  render={({ field }) => {
-                    return (
-                      <FormItem>
-                        <FormLabel>City</FormLabel>
-                        <FormControl>
-                          <Input placeholder="City" type="text" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    );
-                  }}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>City</FormLabel>
+                      <FormControl>
+                        <Input placeholder="City" type="text" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
                 <FormField
                   control={form.control}
