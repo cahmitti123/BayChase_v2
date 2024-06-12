@@ -39,9 +39,11 @@ export const sendWelcomeEmail = (recipientEmail: string, recipientName: string) 
     if (error) {
       console.log('-----> ',info)
       console.log('Error:', error);
+      return info
     } else {
       console.log('-----> ',info)
       console.log('Welcome Email sent to', recipientEmail);
+      return info
     }
   });
 };
