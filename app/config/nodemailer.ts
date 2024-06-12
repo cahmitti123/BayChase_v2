@@ -35,7 +35,7 @@ export const mailOptions = (recipientEmail: string, recipientName: string) => ({
 export const sendWelcomeEmail = (recipientEmail: string, recipientName: string) => {
   const mail = mailOptions(recipientEmail, recipientName);
 
-  transporter.sendMail(mail, function(error, info){
+  return transporter.sendMail(mail, function(error, info){
     if (error) {
       console.log('Error:', error);
     } else {

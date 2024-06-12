@@ -19,8 +19,9 @@ export async function POST(req: NextRequest) {
       await Reservation.create(reservationData);
       console.log("Reservation data saved to database:", reservationData);
 
-      await sendWelcomeEmail(reservationData.Email, reservationData.FullName)
-      console.log("Mail sent successfully!");
+      const res = await sendWelcomeEmail(reservationData.Email, reservationData.FullName)
+
+      console.log("Mail res !!!", res);
       
       return NextResponse.json({ message: 'Reservation Submitted' }, { status: 201 });
     } catch (error) {
