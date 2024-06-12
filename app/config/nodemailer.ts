@@ -35,10 +35,12 @@ export const mailOptions = (recipientEmail: string, recipientName: string) => ({
 export const sendWelcomeEmail = (recipientEmail: string, recipientName: string) => {
   const mail = mailOptions(recipientEmail, recipientName);
 
-  return transporter.sendMail(mail, function(error, info){
+  transporter.sendMail(mail, function(error, info){
     if (error) {
+      console.log('-----> ',info)
       console.log('Error:', error);
     } else {
+      console.log('-----> ',info)
       console.log('Welcome Email sent to', recipientEmail);
     }
   });
