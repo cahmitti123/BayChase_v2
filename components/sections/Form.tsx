@@ -87,7 +87,7 @@ export function ApplyForm() {
   }, []);
 
   const handleCountryChange = (selectedOption: any) => {
-    form.setValue("Country", selectedOption.value);
+    form.setValue("Country", selectedOption);
   };
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {

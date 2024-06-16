@@ -26,7 +26,7 @@ const Reservation = mongoose.models.Reservation || mongoose.model('Reservation',
 // Function to fetch all reservations
 export const fetchAllReservations = async () => {
     try {
-        const reservations = await Reservation.find();
+        const reservations = await Reservation.find().sort({ createdAt: -1 });
         return reservations
     } catch (error) {
         console.error('Error fetching reservations:', error);

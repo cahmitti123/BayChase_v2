@@ -25,7 +25,7 @@ const Page: React.FC<Props> = () => {
   const [authenticated, setAuthenticated] = useState<boolean>(false);
   const [password, setPassword] = useState<string>('');
 
-  const correctPassword: string = 'test';
+  const correctPassword: string = 'baychaser@abdo';
 
   useEffect(() => {
     const fetchReservations = async () => {
