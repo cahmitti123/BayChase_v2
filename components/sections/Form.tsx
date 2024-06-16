@@ -53,7 +53,7 @@ const formSchema = z.object({
 
 export function ApplyForm() {
   const [isLoading, setIsLoading] = React.useState(false);
-  const [countries, setCountries] = React.useState([]);
+  const [countries, setCountries] = React.useState<CountryOption[]>([]);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -70,6 +70,11 @@ export function ApplyForm() {
 
   // Uks$$C_Dh47Qz49
   // NGchOTDvT/u8580xhp09cA==B1TIqAQVouJAa7nq
+
+  interface CountryOption {
+    value: string;
+    label: string;
+  }
 
   React.useEffect(() => {
     // Fetch country data
