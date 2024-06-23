@@ -38,33 +38,33 @@ export function CarouselSpacing() {
       className="w-full md:w-2/5 mt-16 md:mt-3 xl:-mt-9"
     >
       <CarouselContent className="-mt-1 h-[250px]">
-        {PACKAGES.map((pkg, index) => (
-          <CarouselItem key={index} className="pt-1 md:basis-1">
-            <div className="p-1">
-              <Card className="backdrop-blur-sm bg-blue-200 cursor-pointer bg-opacity-10 hover:bg-blue-70 hover:backdrop-blur-sm hover:bg-opacity-10 transition-all delay-300">
-                <CardContent className="flex flex-col ">
-                  <div className="flex flex-row justify-between items-center py-3 w-full">
-                    <Link
-                      href={pkg.href}
-                      className="text-2xl text-start text-blue-70 font-semibold mr-3 hover:text-black cursor-pointer"
-                    >
-                      {pkg.label}
-                    </Link>
-                    <Button
-                      variant="default"
-                      title="test"
-                      className="bg-blue-70 py-1 rounded-full h-auto  hover:bg-slate-400"
-                      type="button"
-                    >
-                      <Link href={"/packages"}>Read More</Link>
-                    </Button>
-                  </div>
-                  <p className="w-2/3">{truncateText(pkg.description, 80)}</p>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
+      {PACKAGES.map((pkg, index) => (
+  <CarouselItem key={index} className="pt-1 md:basis-1">
+    <div className="p-1">
+      <Card className="backdrop-blur-sm bg-blue-200 cursor-pointer bg-opacity-10 hover:bg-blue-70 hover:backdrop-blur-sm hover:bg-opacity-10 transition-all delay-300">
+        <CardContent className="flex flex-col md:flex-row ">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-3 w-full">
+            <Link
+              href={pkg.href}
+              className="text-2xl text-start text-blue-70 font-semibold mr-3 hover:text-black cursor-pointer"
+            >
+              {pkg.label}
+            </Link>
+            <p className="md:w-2/3 w-full mt-2 md:mt-0">{truncateText(pkg.description, 80)}</p>
+            <Button
+              variant="default"
+              title="test"
+              className="bg-blue-70 py-1 rounded-full h-auto mt-2 md:mt-0 md:ml-3 hover:bg-slate-400"
+              type="button"
+            >
+              <Link href={"/packages"}>Read More</Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </CarouselItem>
+))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

@@ -40,22 +40,22 @@ const Footer = () => {
           </Link>
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
             <div className="flex flex-col gap-5">
-              <FooterColumn title="Contact Info">
-                <div className="flex flex-col ">
-                  <div className="flex flex-row items-center gap-2">
-                    <strong className="">Phone : </strong>
-                    <div>+212 7 01 36 49 78</div>
-                  </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <strong className="">Email :</strong>
-                    <div> baychaser.club@outlook.com</div>
-                  </div>
-                  <div className="flex flex-row items-center gap-2">
-                    <strong className="">Address :</strong>
-                    <div> Imsouane, Morocco North of Africa</div>
-                  </div>
-                </div>
-              </FooterColumn>
+            <FooterColumn title="Contact Info">
+      <div className="flex flex-col">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center">
+          <strong className="">Phone :</strong>
+          <div>+212 7 01 36 49 78</div>
+        </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center">
+          <strong className="">Email :</strong>
+          <div>baychaser.club@outlook.com</div>
+        </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center">
+          <strong className="">Address :</strong>
+          <div>Imsouane, Morocco North of Africa</div>
+        </div>
+      </div>
+    </FooterColumn>
             </div>
 
             <div className="flex flex-col gap-5">
