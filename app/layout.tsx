@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import { Navbar_v2 } from "@/components/Navbar_v2";
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
         {/* <Navbar /> */}
         <Navbar_v2 />
         <main className="relative overflow-hidden">{children}</main>
+        <Analytics />
         <Footer />
       </body>
     </html>
