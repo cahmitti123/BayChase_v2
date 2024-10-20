@@ -51,7 +51,7 @@ export const PACKAGES = [
     price: 660,
     href: "/packages",
     img: "/images/beginners_package.jpeg",
-    unit: "6 Days",
+    unit: "7 Days",
     type: "Teaching",
     description:
       "For beginners, acquire foundational surfing skills while gaining an understanding of ocean dynamics and tide theory.",
