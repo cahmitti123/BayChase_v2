@@ -26,25 +26,40 @@ export const PACKAGES = [
     unit: "7 Days",
     type: "Guiding",
     description:
-      "The Surf Guiding package provides you with the best and unparalleled local knowledge to access world-class,uncrowded waves. This package is designed to optimize your surfing experience by ensuring that you have access to the highest quality waves suitable for your skill level. This implies that you will consistently find yourself in the optimal location for your skill level, riding the finest waves available that align with your proficiency.",
+      "The Surf Guiding package provides you with the best and unparalleled local knowledge to access world-class, uncrowded waves. This package is designed to optimize your surfing experience by ensuring that you have access to the highest quality waves suitable for your skill level. This implies that you will consistently find yourself in the optimal location for your skill level, riding the finest waves available that align with your proficiency.",
     features: [
       {
-        feature: "Meal",
+        feature: "2 Video Analysis",
         price: "Included",
-        description: "This package includes one daily meal (lunch).",
+        description: "Two video analysis sessions to improve your skills.",
       },
       {
-        feature: "Equipment",
+        feature: "Transport",
         price: "Included",
-        description: "Boards and WetSuits",
+        description: "Transport to and from surf spots.",
       },
       {
-        feature: "Photographer",
-        price: "50  €",
-        description:
-          "A dedicated photographer will accompany us to capture the memorable moments of the trip.",
+        feature: "Accommodation",
+        price: "Included",
+        description: "Accommodation during the trip.",
+      },
+      {
+        feature: "Meals",
+        price: "Included",
+        description: "Breakfast, lunch, and dinner included.",
+      },
+      {
+        feature: "La Source Trip",
+        price: "Included",
+        description: "Sunset and tea at La Source.",
+      },
+      {
+        feature: "Sleep in 3 Different Spots",
+        price: "Included",
+        description: "Experience sleeping in three different locations.",
       },
     ],
+    maxPeople: 4,
   },
   {
     label: "Beginners Package",
@@ -57,17 +72,32 @@ export const PACKAGES = [
       "For beginners, acquire foundational surfing skills while gaining an understanding of ocean dynamics and tide theory.",
     features: [
       {
-        feature: "Equipment",
+        feature: "Surf Coaching",
         price: "Included",
-        description: "Boards and WetSuits",
+        description: "2 hours of surf coaching.",
       },
       {
-        feature: "Photographer",
-        price: "30  €",
-        description:
-          "A dedicated photographer will accompany us to capture the memorable moments of the trip.",
+        feature: "2 Video Analysis",
+        price: "Included",
+        description: "Two video analysis sessions to improve your skills.",
+      },
+      {
+        feature: "Transport",
+        price: "Included",
+        description: "Transport to and from surf spots.",
+      },
+      {
+        feature: "Accommodation",
+        price: "Included",
+        description: "Accommodation during the trip.",
+      },
+      {
+        feature: "Meals",
+        price: "Included",
+        description: "Breakfast and dinner included.",
       },
     ],
+    maxPeople: 10,
   },
   {
     label: "Intermediate Package",
@@ -80,17 +110,37 @@ export const PACKAGES = [
       "For intermediate surfers, improve your advanced maneuvers and your surfing style.",
     features: [
       {
-        feature: "Equipment",
+        feature: "Surf Coaching",
         price: "Included",
-        description: "Boards and WetSuits",
+        description: "2 hours of surf coaching.",
       },
       {
-        feature: "Photographer",
-        price: "30  €",
-        description:
-          "A dedicated photographer will accompany us to capture the memorable moments of the trip.",
+        feature: "2 Video Analysis",
+        price: "Included",
+        description: "Two video analysis sessions to improve your skills.",
+      },
+      {
+        feature: "Transport",
+        price: "Included",
+        description: "Transport to and from surf spots.",
+      },
+      {
+        feature: "Accommodation",
+        price: "Included",
+        description: "Accommodation during the trip.",
+      },
+      {
+        feature: "Meals",
+        price: "Included",
+        description: "Breakfast, lunch, and dinner included.",
+      },
+      {
+        feature: "La Source Trip",
+        price: "Included",
+        description: "Sunset and tea at La Source.",
       },
     ],
+    maxPeople: 10,
   },
   {
     label: "Private lesson",
