@@ -46,12 +46,7 @@ export const PACKAGES = [
       {
         feature: "Meals",
         price: "Included",
-        description: "Breakfast, lunch, and dinner included.",
-      },
-      {
-        feature: "La Source Trip",
-        price: "Included",
-        description: "Sunset and tea at La Source.",
+        description: "Breakfast and dinner included.",
       },
       {
         feature: "Sleep in 3 Different Spots",
@@ -132,7 +127,7 @@ export const PACKAGES = [
       {
         feature: "Meals",
         price: "Included",
-        description: "Breakfast, lunch, and dinner included.",
+        description: "Breakfast and dinner included.",
       },
       {
         feature: "La Source Trip",
@@ -144,7 +139,7 @@ export const PACKAGES = [
   },
   {
     label: "Private lesson",
-    price: 70,
+    price: 100,
     href: "/packages",
     img: "/images/parivate_lessons.jpeg",
     unit: "Session",
@@ -159,7 +154,7 @@ export const PACKAGES = [
       },
       {
         feature: "Photographer",
-        price: "70  €",
+        price: "Included",
         description:
           "A dedicated photographer will accompany us to capture the memorable moments of the trip.",
       },
