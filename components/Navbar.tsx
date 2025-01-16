@@ -20,12 +20,12 @@ const Navbar = () => {
       <nav className="flexBetween container padding-container relative z-30 py-5">
         <Link href="/">
           <Image
-            src="/logo.png"
+            src="/logo_v2.png"
             alt="BayChaser"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-40 h-auto"
+            className="w-30 h-auto"
           />
         </Link>
 

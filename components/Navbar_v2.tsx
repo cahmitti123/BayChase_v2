@@ -37,12 +37,12 @@ export function Navbar_v2() {
     <div className="flex flex-row justify-between container items-stretch pt-2">
       <Link href="/">
         <Image
-          src="/logo.png"
+          src="/logo_v2.png"
           alt="BayChaser"
-          width={0}
-          height={0}
+          width={100}
+          height={100}
           sizes="100vw"
-          className="w-44 h-auto pb-3"
+          className=" h-auto "
         />
       </Link>
       <div className="hidden lg:flex">

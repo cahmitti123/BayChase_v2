@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="flex flex-col items-start justify-between gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
             <Image
-              src="/logo.png"
+              src="/logo_v2.png"
               alt="BayChaser"
               width={0}
               height={0}

@@ -37,7 +37,7 @@ export default function RootLayout({
           property="og:description"
           content={metadata.description as string}
         />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content="/logo_v2.png" />
         <link rel="icon" type="image/png" href="/favicon.ico" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
