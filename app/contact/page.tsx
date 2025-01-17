@@ -16,7 +16,8 @@ const Contact = () => {
         Contact Us
       </h1>
       <p className=" text-center text-blue-70">
-      Ready to ride the waves with Bay Chaser ? Contact us to get all the info you need for your next surf adventure !
+        Ready to ride the waves with Bay Chaser ? Contact us to get all the info
+        you need for your next surf adventure !
       </p>
 
       <Separator className="my-4" />
@@ -37,6 +38,7 @@ const Contact = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17144.898768694077!2d-9.7860718!3d30.8273494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb25e7d752b20eb%3A0x1598a7f8cccd6362!2sImsouane!5e0!3m2!1sen!2s!4v1644355918954!5m2!1sen!2s&z=100"
             aria-hidden="true"
             className="w-full h-full rounded-md mt-2"
+            title="Google Map"
           />
         </div>
         <div className="container grid gap-4 py-4 w-full h-full">
@@ -64,7 +66,12 @@ const Contact = () => {
             <Label htmlFor="Message" className="text-right">
               Message
             </Label>
-            <Textarea id="Message" className="" style={{ resize: 'none' , height: '100px'}} placeholder="Message" />
+            <Textarea
+              id="Message"
+              className=""
+              style={{ resize: "none", height: "100px" }}
+              placeholder="Message"
+            />
           </div>
           <Button className="bg-blue-70">Send</Button>
         </div>
