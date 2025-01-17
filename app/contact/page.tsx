@@ -5,9 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
-import { StaticGoogleMap, Marker, Path } from "react-static-google-map";
 
-const api_key_maps = "AIzaSyAFpqjkXRHWEaewAl1_6JyJE9sdRme9Tx0";
 
 const Contact = () => {
   return (
@@ -25,7 +23,7 @@ const Contact = () => {
         <div className="flex flex-col items-center justify-between ">
           <div className="grid grid-cols-3">
             <strong>Phone : </strong>
-            <div className="col-span-2">+212 7 01 36 49 78</div>
+            <div className="col-span-2">+212 701-364978</div>
             <strong>Email :</strong>
             <div className="col-span-2">baychaiser.club@gmail.com</div>
             <strong>Address :</strong>
@@ -35,7 +33,7 @@ const Contact = () => {
 
           <iframe
             style={{ border: 0 }}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17144.898768694077!2d-9.7860718!3d30.8273494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb25e7d752b20eb%3A0x1598a7f8cccd6362!2sImsouane!5e0!3m2!1sen!2s!4v1644355918954!5m2!1sen!2s&z=100"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3425.6881212097946!2d-9.82185442441543!3d30.839403974533045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDUwJzIxLjkiTiA5wrA0OScwOS40Ilc!5e0!3m2!1sen!2sfr!4v1737112503672!5m2!1sen!2sfr&z=100"
             aria-hidden="true"
             className="w-full h-full rounded-md mt-2"
             title="Google Map"

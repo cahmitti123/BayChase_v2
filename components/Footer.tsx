@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="flex flex-col">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center">
                     <strong className="">Phone :</strong>
-                    <div>+212 7 01 36 49 78</div>
+                    <div>+212 701-364978</div>
                   </div>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center">
                     <strong className="">Email :</strong>
